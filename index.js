@@ -6,8 +6,8 @@ bot.login(config.token);
 
 bot.on('message', (message) => {
     if(message.content == 'ping') {
-        message.reply('pong');
+        message.reply('Tu veux savoir ton ping? Un peu comme le ping pong? HAHAHA PING PONG COMME LE SPORT.');
     }
 });
 
-// 
+//
