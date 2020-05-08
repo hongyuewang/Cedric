@@ -1,13 +1,29 @@
-const Discord = require('discord.js');
-const time = require('./time');
-const bot = new Discord.Client();
+const {CommandoClient} = require('discord.js-commando');
+const path = require('path');
+
+const bot = new CommandoClient({
+	commandPrefix: 'ced!',
+	owner: '306624719338209282'
+});
 const config = require('./config.json');
+
+bot.registry
+	.registerDefaultTypes()
+	.registerGroups([
+		['facts', 'Facts'],
+		['greetings', 'Greetings']
+	])
+	.registerDefaultGroups()
+	.registerDefaultCommands()
+	.registerCommandsIn(path.join(__dirname, 'commands'));
+
+
 const prefix = `ced!`;
 
 bot.login(config.token);
 
 bot.once('ready', () => {
-	var greetingChannel = bot.channels.cache.find(channel => channel.name === 'general-2');
+	var greetingChannel = bot.channels.cache.find(channel => channel.name === 'general');
 	console.log('Ready!');
 	setInterval( () => {
 		var currentDate = new Date();
@@ -29,74 +45,86 @@ bot.on('message', message => {
 
 // The Ping Command: Cédric replies with a bad pun about ping pong whenever a message contains the word 'ping'.
 bot.on('message', (message) => {
-    if(message.content.toLowerCase().includes('ping')) {
-        if(message.author.id === bot.user.id) return;
-        message.reply('Tu veux savoir ton ping? Un peu comme le ping pong? HAHAHA PING PONG COMME LE SPORT.');
-    }
+	if(message.content.toLowerCase().includes('ping')) {
+		if(message.author.id === bot.user.id) return;
+		message.reply('Tu veux savoir ton ping? Un peu comme le ping pong? HAHAHA PING PONG COMME LE SPORT.');
+	}
 });
 
 // The Quebec Command: Cédric talks about the province of Quebec whenever someone in the server mentions it.
-bot.on('message', (message) => {
-    let randomNumber;
-    const quebecReplies = [
-        "Le Québec c'est un pays!", // 0
-        "Si on me donnait 1 million pour haïr le Québec, je le ferais jamais!", // 1
-        "Le Québec *his* my *ome*. Bin kin, comme mon *ome* dans Minecraft!", // 2
-        "Au Québec, on est une nation. On a notre propre identité au Québec. " + // 3
+bot.on('message', async (message) => {
+	let randomNumber;
+	const quebecReplies = [
+		"Le Québec c'est un pays!", // 0
+		"Si on me donnait 1 million pour haïr le Québec, je le ferais jamais!", // 1
+		"Le Québec *his* my *ome*. Bin kin, comme mon *ome* dans Minecraft!", // 2
+		"Au Québec, on est une nation. On a notre propre identité au Québec. " + // 3
 		"On est différent du reste du Canada. On a notre propre culture. Une super " +
-		"belle culture. On a la Saint-Jean, des usines québécoise. On a de la bonne bière. " +
+		"belle culture. On a la Saint-Jean, des usines québécoises. On a de la bonne bière. " +
 		"Genre en revenant de la job, je prends souvent de l'Unibroue ou de l'Archibald. C'est super bon. " +
 		"Au Vieux-Hull, il y a des bonnes brasseries.",
-        "On a des super belles entreprises qu Québec (des PME). Si on investissait plus dans " + // 4
+		"On a des super belles entreprises au Québec (des PME). Si on investissait plus dans " + // 4
 		"les PME, l'économie serait bien stimulée dans la belle province. Je pense même que ça va " +
 		"même favoriser le nombre d'emplois parce que les entreprises auront tellement d'argent qu'ils " +
 		"pourront embaucher plus de monde. À moment donné, je suis allé au Mont-Tremblant avec mes " +
 		"grand-parents et il y avait un petit magasin local, je m'en rappelle plus du nom. Ah oui, " +
 		"le marché Bourassa. C'était super nice.",
-        "Le drapeau du Québec il est super beau, super attirant. Un drapeau pas trop compliqué et " + // 5
+		"Le drapeau du Québec il est super beau, super attirant. Un drapeau pas trop compliqué et " + // 5
 		"ça rend fier parce que ça a été fait dans un temps où le nationalisme commençait à grandir " +
 		"parce que c'était juste avant les élections de Maurice Duplessis. Et on le voit à la Saint-Jean. " +
 		"Comme j'en ai acheté un pour le after au Dollarama pour 3 piasses. Et c'est juste nice de courir " +
 		"avec ça sur ton dos là. T'as le Québec en toi.",
-        "Tsé c'est pas pour rien qu'on est toujours en conflit avec les anglophones. Ça va jamais partir. " + // 6
+		"Tsé c'est pas pour rien qu'on est toujours en conflit avec les anglophones. Ça va jamais partir. " + // 6
 		"Même quand Pierre Elliot Trudeau a refait la constitution, ça a fait un genre de scandale parce que " +
 		"ça mettait les québécois en minorité.",
-        "On a eu des super bons leaders québécois dans le temps du nationalisme. C'est dommage qu'on en a plus " + // 7
+		"On a eu des super bons leaders québécois dans le temps du nationalisme. C'est dommage qu'on en a plus " + // 7
 		"aujourd'hui. Des super bons leaders comme René Lévesque, Robert Bourassa, Jean Lesage... Et aujourd'hui... " +
 		"Mais François Legault il fait exception parce qu'il est nationaliste. Mais je pense que la rébellion avec " +
 		"Louis-Joseph Papineau, ça c'était le moment le plus québécois.",
-        "Nous autres au Québec on a des super bons joueurs de hockey. Mais malheuresement, la majorité du Canada est anglophone " + // 8
+		"Nous autres au Québec on a des super bons joueurs de hockey. Mais malheuresement, la majorité du Canada est anglophone " + // 8
 		"alors l'équipe de hockey du Canada a pas tant de joueurs québécois, tsé parce que c'est le Canada au complet. " +
 		"Comme au championnat du monde, on a perdu contre les Russes 6-0 parce qu'ils ont pas bien choisi les joueurs.",
-        "Les Simpsons je trouve que j'aime plus la voix de Homer Simpson en québécois qu'en anglais parce que je trouve " + // 9
+		"Les Simpsons je trouve que j'aime plus la voix de Homer Simpson en québécois qu'en anglais parce que je trouve " + // 9
 		"qu'il rentre plus dans le personnage d'un père québécois épais. En anglais on dirait qu'il essaie trop d'être cave."
-    ];
+	];
 
-    if ((message.content.toLowerCase().includes('quebec') || message.content.toLowerCase().includes('québec')
-    || message.content.toLowerCase().includes('québécois'))) {
-        if(message.author.id === bot.user.id) return;
-        randomNumber = Math.floor(Math.random() * 10 ); // returns a random number between 0 and 9
-        message.channel.send(quebecReplies[randomNumber]);
-    }
+	if ((message.content.toLowerCase().includes('quebec') || message.content.toLowerCase().includes('québec')
+	|| message.content.toLowerCase().includes('québécois'))) {
+		if(message.author.id === bot.user.id) return;
+		if ((message.content.toLowerCase().includes('pas') && message.content.toLowerCase().includes('pays')) === false) {
+			message.channel.send("Le Québec?");
+			await new Promise(resolve => setTimeout(resolve, 2000)); // set a pause of 2 seconds
+			randomNumber = Math.floor(Math.random() * 10 ); // returns a random number between 0 and 9
+			message.channel.send(quebecReplies[randomNumber]);
+		}
+	}
 
 });
 
-// The Bashing Command: Cédric bashes whoever suggests that Quebec is not a country.
-
-
-
-
-// Server Info: returns the name of the Server
+// The Anti-Quebec Command: Cédric responds to whoever suggests that Quebec is not a country.
 bot.on('message', async (message) => {
-    if (message.content === `${prefix}server`) {
-		message.channel.send("Tu veux avoir de l'information sur ce serveur? (comme au restaurant hahaha) Why not let's go!")
-        await new Promise(resolve => setTimeout(resolve, 5000)); // set a pause of 5 seconds
-		message.channel.send("Moi au restaurant je prends toujours une grosse poutine québécoise. C'est tellement bon.");
-		await new Promise(resolve => setTimeout(resolve, 5000)); // set a pause of 5 seconds
-		message.channel.send(`Le nom de ce serveur est: **${message.guild.name}**.`);
-		message.channel.send(`Son dictateur est: **${message.guild.owner}** (Mais moi je préférerais avoir un premier ministre parce que ça démontre plus ton leadership).`);
-		message.channel.send(`Son nombre d'habitants est: **${message.guild.memberCount}**.`);
-		message.channel.send(`Il est situé au **${message.guild.region}**.`)
 
-    }
+	if ( (message.content.toLowerCase().includes('quebec')  ||
+	message.content.toLowerCase().includes('québec') ) && message.content.toLowerCase().includes('pas')
+	&& message.content.toLowerCase().includes('pays')) {
+		if(message.author.id === bot.user.id) return;
+		message.channel.send("Tu dis que le Québec c'est pas un pays?");
+		await new Promise(resolve => setTimeout(resolve, 2000)); // set a pause of 2 seconds
+		message.channel.send("Techniquement t'as raison là, mais ça devrait l'être.");
+		await new Promise(resolve => setTimeout(resolve, 10000)); // set a pause of 10 seconds
+		message.channel.send("Légalement c'est pas un pays, mais légitimement ça devrait l'être. " +
+		"Le Québec c'est plutôt une nation.");
+		await new Promise(resolve => setTimeout(resolve, 10000)); // set a pause of 10 seconds
+		message.channel.send("Mais tsé, Maurice Richard était un précurseur " +
+		"du Québec dans le temps de la Grande Noirceur.");
+		await new Promise(resolve => setTimeout(resolve, 10000)); // set a pause of 10 seconds
+		message.channel.send("Ben c'était du nationalisme aussi, mais " +
+		"ça motivait pas tant là. T'étais pas vraiment comfortable.");
+		await new Promise(resolve => setTimeout(resolve, 10000)); // set a pause of 10 seconds
+		message.channel.send("Mais là il faut pas encourager les compagnies américaines au Québec. " +
+		"Tu les encourages seulement si c'est de la qualité. ");
+		await new Promise(resolve => setTimeout(resolve, 10000)); // set a pause of 10 seconds
+		message.channel.send("Sinon tu devrais encourager les petites compagnies locales.");
+
+	}
 });
