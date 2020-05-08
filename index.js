@@ -7,7 +7,20 @@ const prefix = config.prefix;
 bot.login(config.token);
 
 bot.once('ready', () => {
+	var greetingChannel = bot.channels.cache.find(channel => channel.id === '708041420161941526');
 	console.log('Ready!');
+	setInterval( () => {
+		var currentDate = new Date();
+		if (currentDate.getHours() == 9 && currentDate.getMinutes() == 00) {
+			greetingChannel.send("Bon matin ma bande de *heggrolls*!");
+		}
+		if (currentDate.getHours() == 23 && currentDate.getMinutes() == 00) {
+			greetingChannel.send("Bonne nuit mes *heggrolls*");
+		}
+
+	}, 60000);
+
+
 });
 
 bot.on('message', message => {
@@ -42,7 +55,7 @@ bot.on('message', (message) => {
     || message.content.toLowerCase().includes('québécois'))) {
         if(message.author.id === bot.user.id) return;
         randomNumber = Math.floor(Math.random() * 10 ); // returns a random number between 0 and 9
-        message.reply(quebecReplies[randomNumber]);
+        message.channel.send(quebecReplies[randomNumber]);
     }
 
 });
