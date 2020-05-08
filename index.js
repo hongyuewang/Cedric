@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const time = require('./time');
 const bot = new Discord.Client();
 const config = require('./config.json');
-const prefix = config.prefix;
+const prefix = "ced!";
 
 bot.login(config.token);
 
