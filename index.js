@@ -7,7 +7,7 @@ const prefix = config.prefix;
 bot.login(config.token);
 
 bot.once('ready', () => {
-	var greetingChannel = bot.channels.cache.find(channel => channel.id === '708041420161941526');
+	var greetingChannel = bot.channels.cache.find(channel => channel.name === 'general-2');
 	console.log('Ready!');
 	setInterval( () => {
 		var currentDate = new Date();
