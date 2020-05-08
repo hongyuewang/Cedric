@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const time = require('./time');
 const bot = new Discord.Client();
 const config = require('./config.json');
-const prefix = "ced!";
+const prefix = `ced!`;
 
 bot.login(config.token);
 
@@ -89,8 +89,14 @@ bot.on('message', (message) => {
 // Server Info: returns the name of the Server
 bot.on('message', async (message) => {
     if (message.content === `${prefix}server`) {
-        message.channel.send(`Le nom de ce serveur (comme au restaurant hahaha) est: **${message.guild.name}**.`);
+		message.channel.send("Tu veux avoir de l'information sur ce serveur? (comme au restaurant hahaha) Why not let's go!")
         await new Promise(resolve => setTimeout(resolve, 5000)); // set a pause of 5 seconds
-        message.channel.send("Moi au restaurant je prends toujours une grosse poutine québécoise. C'est tellement bon.");
+		message.channel.send("Moi au restaurant je prends toujours une grosse poutine québécoise. C'est tellement bon.");
+		await new Promise(resolve => setTimeout(resolve, 5000)); // set a pause of 5 seconds
+		message.channel.send(`Le nom de ce serveur est: **${message.guild.name}**.`);
+		message.channel.send(`Son dictateur est: **${message.guild.owner}** (Mais moi je préférerais avoir un premier ministre parce que ça démontre plus ton leadership).`);
+		message.channel.send(`Son nombre d'habitants est: **${message.guild.memberCount}**.`);
+		message.channel.send(`Il est situé au **${message.guild.region}**.`)
+
     }
 });
