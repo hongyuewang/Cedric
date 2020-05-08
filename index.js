@@ -7,6 +7,7 @@ const bot = new CommandoClient({
 });
 const config = require('./config.json');
 
+// Registering command groups
 bot.registry
 	.registerDefaultTypes()
 	.registerGroups([
@@ -17,9 +18,7 @@ bot.registry
 	.registerDefaultCommands()
 	.registerCommandsIn(path.join(__dirname, 'commands'));
 
-
-const prefix = `ced!`;
-
+// Login
 bot.login(config.token);
 
 bot.once('ready', () => {
@@ -42,6 +41,8 @@ bot.once('ready', () => {
 bot.on('message', message => {
 	console.log(message.content);
 });
+
+// Keyword Commands
 
 // The Ping Command: Cédric replies with a bad pun about ping pong whenever a message contains the word 'ping'.
 bot.on('message', (message) => {
