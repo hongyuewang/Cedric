@@ -98,7 +98,7 @@ bot.on('message', async (message) => {
 			// set a pause of 2 seconds
 			await new Promise(resolve => setTimeout(resolve, 2000));
 			// returns a random number between 0 and 9
-			randomNumber = Math.floor(Math.random() * 10 );
+			randomNumber = Math.floor(Math.random() * quebecReplies.length );
 			message.channel.send(quebecReplies[randomNumber]);
 		}
 	}

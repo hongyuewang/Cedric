@@ -8,7 +8,6 @@ module.exports = class ServerInfo extends Command {
             group: 'facts',
             memberName: 'serverinfo',
             description: 'Information on the server the command was invoked.'
-
         });
     }
 
