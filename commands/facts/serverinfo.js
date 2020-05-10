@@ -13,7 +13,7 @@ module.exports = class ServerInfo extends Command {
     }
 
     async run(message) {
-        message.say("Tu veux avoir de l'information sur ce serveur? (comme au restaurant hahaha) Why not let's go!");
+        message.say("Tu veux avoir de l'information sur ce serveur? Why not let's go!");
 		await new Promise(resolve => setTimeout(resolve, 2000)); // set a pause of 2 seconds
 		message.say("En parlant de serveur, moi au restaurant je prends toujours une grosse poutine québécoise. C'est tellement bon.");
 		await new Promise(resolve => setTimeout(resolve, 3000)); // set a pause of 3 seconds
