@@ -1,3 +1,4 @@
+const Discord = require('discord.js');
 const {CommandoClient} = require('discord.js-commando');
 const path = require('path');
 
@@ -12,7 +13,8 @@ bot.registry
 	.registerDefaultTypes()
 	.registerGroups([
 		['facts', 'Facts'],
-		['greetings', 'Greetings']
+		['greetings', 'Greetings'],
+		['games', 'Games']
 	])
 	.registerDefaultGroups()
 	.registerDefaultCommands()
