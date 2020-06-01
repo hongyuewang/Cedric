@@ -32,7 +32,7 @@ bot.registry
 	.registerCommandsIn(path.join(__dirname, 'commands'));
 
 // Login
-bot.login(config.token);
+bot.login(process.env.TOKEN);
 
 bot.once('ready', () => {
 	var greetingChannel = bot.channels.cache.find(channel => channel.name === 'general');
