@@ -20,6 +20,10 @@ module.exports = class Quiz extends Command {
         };
 
         message.channel.send(item.question).then(() => {
+            if (item.image != undefined) {
+                const embed = new Discord.MessageEmbed().setImage(item.image);
+                message.channel.send(embed);
+            }
             message.channel.awaitMessages(filter, {max: 1, time: 30000, errors: ['time']})
             .then(collected => {
                 message.channel.send(`Heille, ${collected.first().author} a eu la bonne réponse! Wow t'es smart!`);
