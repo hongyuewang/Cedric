@@ -1,6 +1,6 @@
 [
     {
-        "question": "À quelle compagnie appartient le slogan suivant: \"Pour bien faire\"?",
+        "question": "À quelle compagnie appartient le slogan \"Pour bien faire\"?",
         "answers": ["RONA"]
     },
     {
@@ -13,13 +13,21 @@
         "image": "https://lh3.googleusercontent.com/proxy/D3MUL1a5X0ixm5nnXvRF_7QVC3Hhtme6JVxX94Ze85R3_c2-j7ehasZeE0PIG-DvmL-rGfc4SRrv2Lx4zngHVzD-j4peMdnIqvkkLYWfsrCIhBEOw39KP76jtp0bY_b3SahDDncxefvw7WY"
     },
     {
-        "question": "À quelle compagnie appartient le slogan suivant: \"L'évolution de la mobilité\"?",
+        "question": "À quelle compagnie appartient le slogan \"L'évolution de la mobilité\"?",
         "answers": ["Bombardier"]
     },
     {
         "question": "À quelle compagnie appartient le logo ci-dessous?",
         "answers": ["Jean Coutu"],
         "image": "https://lh3.googleusercontent.com/rDhiWbNQPMlhD0TScgEIuQhy1G3Il72y7VMO5huHpAjIpCobn3j3tkaWNqyhj94gWAE"
+    },
+    {
+        "question": "Quel est le nom des succursales de Couche-Tard à l'extérieur du Québec?",
+        "answers": ["Mac's", "Macs", "Mac's Convenience Stores"]
+    },
+    {
+        "question": "À quelle compagnie appartient le slogan \"Mon épicier\"?",
+        "answers": ["Métro", "Metro", "Métro Inc", "Metro Inc", "Métro Inc.", "Metro Inc."]
     }
 
 ]

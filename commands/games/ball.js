@@ -44,8 +44,8 @@ module.exports = class Ball extends Command {
 
         const embedUserShot = new Discord.MessageEmbed()
         .setColor('#0099ff')
-        .setTitle('Vous faites un lancer. Cédric encourage le ballon.')
-        .setDescription(`"Aweille let's go le ballon!"`)
+        .setTitle('Vous faites un lancer. Cédric vous encourage.')
+        .setDescription(`"Let's go t'es capable!"`)
         .attachFiles(['./commands/games/ball-img/user_shoot.jpg'])
         .setImage('attachment://user_shoot.jpg');
 
