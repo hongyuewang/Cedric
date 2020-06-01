@@ -1,0 +1,10 @@
+[
+    {
+        "question": "À quelle compagnie appartient le slogan suivant: \"Pour bien faire\"?",
+        "answers": ["RONA"]
+    },
+    {
+        "question": "Qui était le 1er premier ministre du Québec après la Confédération du Canada en 1867?",
+        "answers": ["Pierre-Joseph-Olivier Chauveau", "Chauveau", "Pierre Chauveau"]
+    }
+]
