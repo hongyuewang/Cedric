@@ -32,7 +32,9 @@ bot.registry
 	.registerCommandsIn(path.join(__dirname, 'commands'));
 
 // Login
-bot.login(process.env.TOKEN);
+require('dotenv').config()
+const token = process.env.TOKEN;
+bot.login(token);
 
 bot.once('ready', () => {
 	var greetingChannel = bot.channels.cache.find(channel => channel.name === 'general');
