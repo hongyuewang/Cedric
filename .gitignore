@@ -1,3 +1,4 @@
 # See https://www.atlassian.com/git/tutorials/saving-changes/gitignore for syntax
 
 config.json
+*.env

@@ -1,3 +1,15 @@
+const http = require('http');
+const express = require('express');
+const app = express();
+app.get("/", (request, response) => {
+  console.log(Date.now() + " Ping Received");
+  response.sendStatus(200);
+});
+app.listen(process.env.PORT);
+setInterval(() => {
+  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+}, 280000);
+
 const Discord = require('discord.js');
 const {CommandoClient} = require('discord.js-commando');
 const path = require('path');
@@ -6,7 +18,6 @@ const bot = new CommandoClient({
 	commandPrefix: 'ced!',
 	owner: '306624719338209282'
 });
-const config = require('./config.json');
 
 // Registering command groups
 bot.registry
@@ -153,7 +164,7 @@ bot.on('message', async (message) => {
 		message.channel.send("Cool whip, c’est pas nice à dire. T'as juste les"
 		+ " américains qui disent cool whip, pis ben ça fait vraiment"
 		+ " américain. C’est du cool hwhip! Genre d’la bonne crème fouettée"
-		+ " qu’on prend sur notre gateau quand on est jeune.");
+		+ " qu’on prend sur notre gâteau quand on est jeune.");
 		await new Promise(resolve => setTimeout(resolve, 10000));
 		message.channel.send("Moi j'en ai mangé beaucoup de cool hwhip."
 		+ " Mettons, tu peux pas avoir une tarte sans cool hwhip.");
