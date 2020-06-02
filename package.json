@@ -1,6 +1,6 @@
 {
   "name": "Cédric",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A wholesome bot that loves Quebec.",
   "main": "node index.js",
   "scripts": {
@@ -17,6 +17,7 @@
     "discord.js-commando": "github:discordjs/Commando",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "express.js": "^1.0.0"
+    "express.js": "^1.0.0",
+    "moment-timezone": "^0.5.31"
   }
 }

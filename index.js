@@ -10,6 +10,7 @@ setInterval(() => {
   http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
 }, 280000);
 
+var moment = require('moment-timezone');
 const Discord = require('discord.js');
 const {CommandoClient} = require('discord.js-commando');
 const path = require('path');
@@ -36,18 +37,23 @@ require('dotenv').config()
 const token = process.env.TOKEN;
 bot.login(token);
 
-bot.once('ready', () => {
+ot.once('ready', () => {
 	var greetingChannel = bot.channels.cache.find(channel => channel.name === 'general');
 	console.log('Ready!');
 	setInterval( () => {
-		var currentDate = new Date();
-		if (currentDate.getHours() == 09 && currentDate.getMinutes() == 00) {
+		var localTime = moment().tz("America/Toronto");
+		if (localTime.hour() == 09 && localTime.minutes() == 00) {
 			greetingChannel.send("Bon matin ma bande de *heggrolls*!");
 		}
-		if (currentDate.getHours() == 23 && currentDate.getMinutes() == 30) {
+		if (localTime.hour() == 23 && localTime.minutes() == 00) {
 			greetingChannel.send("Bonne nuit mes *heggrolls*");
 		}
-        if (currentDate.getHours() == 16 && currentDate.getMinutes() == 20) {
+    // TEMPORARY //
+    if (localTime.hour() == 15 && localTime.minutes() == 00) {
+			greetingChannel.send("Guys j'ai vu mon grand-père dire pénis!!!!!!!!!!!!!");
+		}
+
+    if (localTime.hour() == 16 && localTime.minutes() == 20) {
 			greetingChannel.send("Haha il est 4:20");
 		}
 
@@ -58,6 +64,8 @@ bot.once('ready', () => {
 
 bot.on('message', message => {
 	console.log(message.content);
+    var localTime = moment().tz("America/Toronto");
+    console.log(localTime.hour() + ":"+ localTime.minutes() + ":" + localTime.seconds());
 });
 
 // Keyword Commands
