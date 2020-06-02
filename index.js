@@ -41,11 +41,14 @@ bot.once('ready', () => {
 	console.log('Ready!');
 	setInterval( () => {
 		var currentDate = new Date();
-		if (currentDate.getHours() == 9 && currentDate.getMinutes() == 00) {
+		if (currentDate.getHours() == 09 && currentDate.getMinutes() == 00) {
 			greetingChannel.send("Bon matin ma bande de *heggrolls*!");
 		}
-		if (currentDate.getHours() == 23 && currentDate.getMinutes() == 00) {
+		if (currentDate.getHours() == 23 && currentDate.getMinutes() == 30) {
 			greetingChannel.send("Bonne nuit mes *heggrolls*");
+		}
+        if (currentDate.getHours() == 16 && currentDate.getMinutes() == 20) {
+			greetingChannel.send("Haha il est 4:20");
 		}
 
 	}, 57500);
