@@ -4,11 +4,11 @@ A Discord bot created for my friend group's server.
 ## Built with 
 
 * **node.js**
-    * *discord.js*
-    * *discord.js-commando*
-    * *dotenv*
-    * *express*
-    * *moment-timezone*
+    * discord.js
+    * discord.js-commando
+    * dotenv
+    * express
+    * moment-timezone
 
 ## Authors 
 
