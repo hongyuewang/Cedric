@@ -37,7 +37,7 @@ require('dotenv').config()
 const token = process.env.TOKEN;
 bot.login(token);
 
-ot.once('ready', () => {
+bot.once('ready', () => {
 	var greetingChannel = bot.channels.cache.find(channel => channel.name === 'general');
 	console.log('Ready!');
 	setInterval( () => {
