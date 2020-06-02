@@ -1,6 +1,6 @@
 {
   "name": "Cédric",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A wholesome bot that loves Quebec.",
   "main": "node index.js",
   "scripts": {
