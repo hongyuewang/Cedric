@@ -48,7 +48,7 @@ bot.once('ready', () => {
 			greetingChannel.send("Bonne nuit mes *heggrolls*");
 		}
 
-	}, 60000);
+	}, 57500);
 
 
 });
