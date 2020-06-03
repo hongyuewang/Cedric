@@ -7,7 +7,7 @@ module.exports = class ServerInfo extends Command {
             aliases: ['serverinfo'],
             group: 'facts',
             memberName: 'serverinfo',
-            description: 'Information on the server the command was invoked.'
+            description: 'Information on the server the command was invoked in.'
         });
     }
 

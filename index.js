@@ -38,23 +38,27 @@ const token = process.env.TOKEN;
 bot.login(token);
 
 bot.once('ready', () => {
-	var greetingChannel = bot.channels.cache.find(channel => channel.name === 'general');
-	console.log('Ready!');
-	setInterval( () => {
-		var localTime = moment().tz("America/Toronto");
-		if (localTime.hour() == 09 && localTime.minutes() == 00) {
-			greetingChannel.send("Bon matin ma bande de *heggrolls*!");
-		}
-		if (localTime.hour() == 23 && localTime.minutes() == 00) {
-			greetingChannel.send("Bonne nuit mes *heggrolls*");
-		}
+    var guildID;
+    for (guildID of bot.guilds.cache.keyArray()) {
+        var greetingGuild = bot.guilds.cache.get(guildID);
+        var greetingChannel = greetingGuild.channels.cache.find(channel => channel.name === 'general');
+        console.log('Ready!');
+        greetingChannel.send("YoOoOOoOoO");
+        setInterval( () => {
+            var localTime = moment().tz("America/Toronto");
+            if (localTime.hour() == 09 && localTime.minutes() == 00) {
+                greetingChannel.send("Bon matin ma bande de *heggrolls*!");
+            }
+            if (localTime.hour() == 23 && localTime.minutes() == 30) {
+                greetingChannel.send("Bonne nuit mes *heggrolls*");
+            }
 
-    if (localTime.hour() == 16 && localTime.minutes() == 20) {
-			greetingChannel.send("Haha il est 4:20");
-		}
+            if (localTime.hour() == 16 && localTime.minutes() == 20) {
+                greetingChannel.send("Haha il est 4:20");
+            }
 
-	}, 57500);
-
+        }, 57500);
+    }
 
 });
 

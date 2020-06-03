@@ -1,7 +1,7 @@
 {
   "name": "Cédric",
-  "version": "1.0.3",
-  "description": "A wholesome bot that loves Quebec.",
+  "version": "1.0.4",
+  "description": "A very wholesome bot that loves the province of Quebec.",
   "main": "node index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

@@ -44,6 +44,7 @@ module.exports = class Quiz extends Command {
                 })
                 .catch(collected => {
                     message.channel.send(`Ça a l'air que personne a eu la bonne réponse... Come on, vous aimez pas le Québec...`);
+                    message.channel.send(`La réponse était: **${item.answers[0]}**.`);
 
                     questionsAsked++;
 
@@ -51,6 +52,7 @@ module.exports = class Quiz extends Command {
                         play();
                     } else {
                         message.channel.send("Bin kin, c'était une bonne game les gars! Je vous félicite pour vos connaissances sur le Québec!");
+                        message.channel.send("Voici le leaderboard de cette partie. Ou plutôt le tableau de classement parce que je suis québécois.");
                     }
                 });
             });
