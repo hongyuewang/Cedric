@@ -24,7 +24,7 @@ module.exports = class Ball extends Command {
         const embedPass = new Discord.MessageEmbed()
         .setColor('#0099ff')
         .setTitle('Cédric vous passe la balle.')
-        .setDescription('"Vas-y, fais un panier! Comme à la NBA!"')
+        .setDescription('"Vas-y, fais un point! Comme à la NBA!"')
         .attachFiles(['./commands/games/ball-img/cedric_pass.jpg'])
         .setImage('attachment://cedric_pass.jpg');
 
@@ -39,43 +39,43 @@ module.exports = class Ball extends Command {
         .setColor('#0099ff')
         .setTitle('Cédric lance le ballon vers le panier, espérant faire un point.')
         .setDescription('"Yooooo, check la balle aller!"')
-        .attachFiles(['./commands/games/ball-img/shoot.gif'])
-        .setImage('attachment://shoot.gif');
+        .attachFiles(['./commands/games/ball-img/cedric_shot.gif'])
+        .setImage('attachment://cedric_shot.gif');
 
         const embedUserShot = new Discord.MessageEmbed()
         .setColor('#0099ff')
         .setTitle('Vous faites un lancer. Cédric vous encourage.')
         .setDescription(`"Let's go t'es capable!"`)
-        .attachFiles(['./commands/games/ball-img/user_shoot.jpg'])
-        .setImage('attachment://user_shoot.jpg');
+        .attachFiles(['./commands/games/ball-img/user_shot.gif'])
+        .setImage('attachment://user_shot.gif');
 
         const embedCedricPoint = new Discord.MessageEmbed()
         .setColor('#0099ff')
         .setTitle('Cédric marque un point.')
         .setDescription(`"Oh ça c'était un bon lancer! Je suis fier de mon coup!"`)
-        .attachFiles(['./commands/games/ball-img/point.jpg'])
-        .setImage('attachment://point.jpg');
+        .attachFiles(['./commands/games/ball-img/cedric_point.gif'])
+        .setImage('attachment://cedric_point.gif');
 
         const embedCedricMiss = new Discord.MessageEmbed()
         .setColor('#0099ff')
         .setTitle('Cédric manque le panier.')
-        .setDescription(`"It's hokay, je l'aurai la prochaine fois."`)
-        .attachFiles(['./commands/games/ball-img/miss.jpg'])
-        .setImage('attachment://miss.jpg');
+        .setDescription(`"It's *hokay*, je l'aurai la prochaine fois."`)
+        .attachFiles(['./commands/games/ball-img/cedric_miss.gif'])
+        .setImage('attachment://cedric_miss.gif');
 
         const embedUserPoint = new Discord.MessageEmbed()
         .setColor('#0099ff')
         .setTitle('Vous marquez un point.')
         .setDescription(`"Heille bravo ${message.author.username}. C'était vraiment beau ça."`)
-        .attachFiles(['./commands/games/ball-img/point.jpg'])
-        .setImage('attachment://point.jpg');
+        .attachFiles(['./commands/games/ball-img/user_point.gif'])
+        .setImage('attachment://user_point.gif');
 
         const embedUserMiss = new Discord.MessageEmbed()
         .setColor('#0099ff')
         .setTitle('Vous manquez le panier.')
         .setDescription(`"Come on ${message.author.username}, t'es poche!"`)
-        .attachFiles(['./commands/games/ball-img/miss.jpg'])
-        .setImage('attachment://miss.jpg');
+        .attachFiles(['./commands/games/ball-img/user_miss.gif'])
+        .setImage('attachment://user_miss.gif');
 
         message.say("Le basket? Ye je suis down de jouer.");
 		await new Promise(resolve => setTimeout(resolve, 2000)); // set a pause of 2 seconds

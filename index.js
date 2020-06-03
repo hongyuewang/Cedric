@@ -48,10 +48,6 @@ bot.once('ready', () => {
 		if (localTime.hour() == 23 && localTime.minutes() == 00) {
 			greetingChannel.send("Bonne nuit mes *heggrolls*");
 		}
-    // TEMPORARY //
-    if (localTime.hour() == 15 && localTime.minutes() == 00) {
-			greetingChannel.send("Guys j'ai vu mon grand-père dire pénis!!!!!!!!!!!!!");
-		}
 
     if (localTime.hour() == 16 && localTime.minutes() == 20) {
 			greetingChannel.send("Haha il est 4:20");
