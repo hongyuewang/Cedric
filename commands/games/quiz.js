@@ -33,6 +33,10 @@ module.exports = class Quiz extends Command {
                 message.channel.awaitMessages(filter, {max: 1, time: 30000, errors: ['time']})
                 .then(collected => {
                     message.channel.send(`Heille, ${collected.first().author}, t'as eu la bonne réponse! T'es smart!`);
+                    message.channel.send(`La réponse était: **${item.answers[0]}**.`);
+                    if (item.alternativeAnswer != undefined) {
+                        message.channel.send(`**${item.alternativeAnswer}** était aussi acceptable.`);
+                    }
 
                     questionsAsked++;
 
@@ -45,6 +49,9 @@ module.exports = class Quiz extends Command {
                 .catch(collected => {
                     message.channel.send(`Ça a l'air que personne a eu la bonne réponse... Come on, vous aimez pas le Québec...`);
                     message.channel.send(`La réponse était: **${item.answers[0]}**.`);
+                    if (item.alternativeAnswer != undefined) {
+                        message.channel.send(`**${item.alternativeAnswer}** était aussi acceptable.`);
+                    }
 
                     questionsAsked++;
 
