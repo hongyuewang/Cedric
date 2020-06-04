@@ -29,5 +29,7 @@ module.exports = class Chonky extends Command {
         })
         .then(console.log)
         .catch(console.error);
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        message.channel.send("Voici mon chonky seal de 60 cm!");
     }
 }
