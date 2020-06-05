@@ -43,21 +43,72 @@
 
     {
         "question": "**À quelle compagnie appartient le logo ci-dessous?**",
-        "answers": ["Frank And Oak"],
+        "answers": ["*Frank Hand Hoak*", "Frank And Oak"],
         "image": "https://pbs.twimg.com/profile_images/1215314465584971776/cpCW37wX_400x400.jpg"
     },
 
     {
         "question": "**Qui est ce député fédéral?**",
         "answers": ["Steven MacKinnon", "Steve MacKinnon", "Steven"],
-        "image": "https://www.tpsgc-pwgsc.gc.ca/apropos-about/images/Steven_MacKinnon.png"
+        "image": "https://www.aeromontreal.ca/image.png?v=e65573a432bb41412e62e1c256ab"
     },
 
     {
         "question": "**Quelle est le mot à l'origine du terme « Parlement »?**",
         "answers": ["Parler", "Alexander MacKinnon", "Alex MacKinnon", "Alex"],
         "alternativeAnswer": "Alexander MacKinnon"
+    },
+
+    {
+        "question": "**À quelle compagnie appartient le logo ci-dessous?**",
+        "answers": ["Scores"],
+        "image": "https://i.imgur.com/3mzlLJp.png"
+    },
+
+    {
+        "question": "**Qui est-ce?**",
+        "answers": ["Elvis Gratton", "Bob Gratton"],
+        "image": "https://s3.amazonaws.com/rose.vero/wp-content/uploads/2020/03/19195038/22.-Elvis-Gratton.jpeg"
+    },
+
+    {
+        "question": "**De quel restaurant vient ce *amburger*?**",
+        "answers": ["La Belle et la Boeuf", "Belle et la Boeuf", "La Belle & la Boeuf", "Belle & la Boeuf"],
+        "image": "https://foodtastic.ca/wp-content/uploads/2018/06/IMG_5961-961x768.jpg"
+    },
+
+    {
+        "question": "**Quel était l'ancien nom de la ville de Montréal?**",
+        "answers": ["Ville-Marie"]
+    },
+
+    {
+        "question": "**Qui est ce patriote?**",
+        "answers": ["Louis-Joseph Papineau", "Papineau", "Louis Papineau"],
+        "image": "https://cdn.britannica.com/05/172805-050-B8A359E0/Louis-Joseph-Papineau-oil-canvas-collection-Alfred-W-1872.jpg"
+    },
+
+    {
+        "question": "**Qui a écrit le roman *Le Canard de Bois*?**",
+        "answers": ["Louis Caron", "Caron"]
+    },
+
+    {
+        "question": "**Le Québec a été connu sous le nom de ___-Canada.**",
+        "answers": ["Bas-Canada", "Bas", "Le Bas-Canada"]
+    },
+
+    {
+        "question": "**Quel est le pourcentage d'alcool présent dans une bouteille de Captain Morgan?**",
+        "answers": ["35%", "35", "0.35", "0,35"]
+    },
+
+    {
+        "question": "**À quel lac québécois ont eu lieu les négociations entre Brian Mulroney et les dix Premiers ministres provinciaux sur les réformes constitutionnelles?**",
+        "answers": ["Le lac Meech", "Lac Meech", "Meech"]
     }
+
+
 
 
 ]
