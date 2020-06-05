@@ -17,7 +17,7 @@ module.exports = class ServerInfo extends Command {
 		message.say("En parlant de serveur, moi au restaurant je prends toujours une grosse poutine québécoise. C'est tellement bon.");
 		await new Promise(resolve => setTimeout(resolve, 3000)); // set a pause of 3 seconds
 		message.say(`Le nom de ce serveur est: **${message.guild.name}**.`);
-		message.say(`Son dictateur est: **${message.guild.owner}** (Mais moi je préférerais avoir un premier ministre parce que ça démontre plus ton leadership).`);
+		message.say(`Son dictateur est: **${message.guild.owner.user.username}** (Mais moi je préférerais avoir un premier ministre parce que ça démontre plus ton leadership).`);
 		message.say(`Son nombre d'habitants est: **${message.guild.memberCount}**.`);
 		message.say(`Il est situé au **${message.guild.region}**.`)
     }
