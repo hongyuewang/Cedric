@@ -196,3 +196,37 @@ setInterval(() => {
             + " capitaliste sauvage.");
         }
     });
+
+    // The Question Command: Cédric answers anything.
+
+    bot.on('message', async (message) => {
+        const embedYes = new Discord.MessageEmbed()
+        .setColor('#33a532')
+        .setTitle('Ben oui!!')
+        .setDescription('AhHhHHhHhHhHHhHHh')
+        .attachFiles(['./img/questions/yes.gif'])
+        .setImage('attachment://yes.gif');
+
+        const embedNo = new Discord.MessageEmbed()
+        .setColor('#FF0000')
+        .setTitle('Non.')
+        .attachFiles(['./img/questions/no.gif'])
+        .setImage('attachment://no.gif');
+
+        if (message.content.toLowerCase().startsWith('cédric est') ||
+        message.content.toLowerCase().startsWith('cedric est') || message.content.toLowerCase().startsWith('cédric peu') ||
+        message.content.toLowerCase().startsWith('cedric peu') ||
+        message.content.toLowerCase().startsWith('cédric va') ||
+        message.content.toLowerCase().startsWith('cedric peu')) {
+            if(message.author.id === bot.user.id) return;
+            let randomNumber = Math.floor(Math.random() * 2);
+            switch (randomNumber) {
+                case 0:
+                    message.channel.send(embedNo);
+                    break;
+                case 1:
+                    message.channel.send(embedYes);
+                    break;
+            }
+        }
+    });
