@@ -202,6 +202,7 @@ setInterval(() => {
     bot.on('message', async (message) => {
         const embedYes = new Discord.MessageEmbed()
         .setColor('#33a532')
+        .setAuthor(message.author.username, message.author.displayAvatarURL())
         .setTitle('Ben oui!!')
         .setDescription('AhHhHHhHhHhHHhHHh')
         .attachFiles(['./img/questions/yes.gif'])
@@ -209,24 +210,46 @@ setInterval(() => {
 
         const embedNo = new Discord.MessageEmbed()
         .setColor('#FF0000')
+        .setAuthor(message.author.username, message.author.displayAvatarURL())
         .setTitle('Non.')
         .attachFiles(['./img/questions/no.gif'])
         .setImage('attachment://no.gif');
 
-        if (message.content.toLowerCase().startsWith('cédric est') ||
-        message.content.toLowerCase().startsWith('cedric est') || message.content.toLowerCase().startsWith('cédric peu') ||
-        message.content.toLowerCase().startsWith('cedric peu') ||
-        message.content.toLowerCase().startsWith('cédric va') ||
-        message.content.toLowerCase().startsWith('cedric peu')) {
+        if (message.content.toLowerCase().replace(/é/g,'e')
+        .startsWith('cedric est') || message.content.toLowerCase()
+        .replace(/é/g,'e').startsWith('cedric peu') || message.content
+        .toLowerCase().replace(/é/g,'e').startsWith('cedric va') || message
+        .content.toLowerCase().replace(/é/g,'e').startsWith('cedric a') ||
+        message.content.toLowerCase().replace(/'/g,'').replace(/é/g,'e')
+        .startsWith('cedric tes') || message.content.toLowerCase()
+        .replace(/'/g,'').replace(/é/g,'e').startsWith('cedric jai') || message
+        .content.toLowerCase().replace(/'/g,'').replace(/é/g,'e')
+        .startsWith('cedric je peu') || message.content.toLowerCase().
+        replace(/'/g,'').replace(/é/g,'e').startsWith('cedric tu peu')) {
             if(message.author.id === bot.user.id) return;
-            let randomNumber = Math.floor(Math.random() * 2);
+            const randomNumber = Math.floor(Math.random() * 2);
             switch (randomNumber) {
                 case 0:
-                    message.channel.send(embedNo);
-                    break;
+                message.channel.send(embedNo);
+                break;
                 case 1:
-                    message.channel.send(embedYes);
-                    break;
+                message.channel.send(embedYes);
+                break;
+            }
+        }
+
+        if (message.content.toLowerCase().replace(/é/g,'e').replace(/ù/g,'u')
+        .startsWith('cedric ou')) {
+            if(message.author.id === bot.user.id) return;
+            const locations = require('./json/questions/locations.json');
+            const randomNumber = Math.floor(Math.random() *
+            locations.length);
+            const randomLocationName = locations[randomNumber].name;
+            const randomLocationImage = new
+            Discord.MessageEmbed().setImage(locations[randomNumber].image);
+            message.channel.send(`**` + randomLocationName + `**`);
+            if (randomLocationName != undefined) {
+                message.channel.send(randomLocationImage);
             }
         }
     });

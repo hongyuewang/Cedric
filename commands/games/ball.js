@@ -16,6 +16,7 @@ module.exports = class Ball extends Command {
         let choice;
         const embedStart = new Discord.MessageEmbed()
         .setColor('#0099ff')
+        .setAuthor(message.author.username, message.author.displayAvatarURL())
         .setTitle('Cédric est en possession du ballon.')
         .setDescription('Va-t-il faire une passe ou tirer?')
         .attachFiles(['./commands/games/ball-img/basketball.jpg'])
@@ -23,6 +24,7 @@ module.exports = class Ball extends Command {
 
         const embedPass = new Discord.MessageEmbed()
         .setColor('#0099ff')
+        .setAuthor(message.author.username, message.author.displayAvatarURL())
         .setTitle('Cédric vous passe la balle.')
         .setDescription('"Vas-y, fais un point! Comme à la NBA!"')
         .attachFiles(['./commands/games/ball-img/cedric_pass.jpg'])
@@ -30,6 +32,7 @@ module.exports = class Ball extends Command {
 
         const embedNoStimuli = new Discord.MessageEmbed()
         .setColor('#0099ff')
+        .setAuthor(message.author.username, message.author.displayAvatarURL())
         .setTitle('Cédric ne répond pas aux stimuli.')
         .setDescription('... La game est finie.')
         .attachFiles(['./commands/games/ball-img/basketball.jpg'])
@@ -37,6 +40,7 @@ module.exports = class Ball extends Command {
 
         const embedCedricShot = new Discord.MessageEmbed()
         .setColor('#0099ff')
+        .setAuthor(message.author.username, message.author.displayAvatarURL())
         .setTitle('Cédric lance le ballon vers le panier, espérant faire un point.')
         .setDescription('"Yooooo, check la balle aller!"')
         .attachFiles(['./commands/games/ball-img/cedric_shot.gif'])
@@ -44,6 +48,7 @@ module.exports = class Ball extends Command {
 
         const embedUserShot = new Discord.MessageEmbed()
         .setColor('#0099ff')
+        .setAuthor(message.author.username, message.author.displayAvatarURL())
         .setTitle('Vous faites un lancer. Cédric vous encourage.')
         .setDescription(`"Let's go t'es capable!"`)
         .attachFiles(['./commands/games/ball-img/user_shot.gif'])
@@ -51,6 +56,7 @@ module.exports = class Ball extends Command {
 
         const embedCedricPoint = new Discord.MessageEmbed()
         .setColor('#0099ff')
+        .setAuthor(message.author.username, message.author.displayAvatarURL())
         .setTitle('Cédric marque un point.')
         .setDescription(`"Oh ça c'était un bon lancer! Je suis fier de mon coup!"`)
         .attachFiles(['./commands/games/ball-img/cedric_point.gif'])
@@ -58,6 +64,7 @@ module.exports = class Ball extends Command {
 
         const embedCedricMiss = new Discord.MessageEmbed()
         .setColor('#0099ff')
+        .setAuthor(message.author.username, message.author.displayAvatarURL())
         .setTitle('Cédric manque le panier.')
         .setDescription(`"It's *hokay*, je l'aurai la prochaine fois."`)
         .attachFiles(['./commands/games/ball-img/cedric_miss.gif'])
@@ -65,6 +72,7 @@ module.exports = class Ball extends Command {
 
         const embedUserPoint = new Discord.MessageEmbed()
         .setColor('#0099ff')
+        .setAuthor(message.author.username, message.author.displayAvatarURL())
         .setTitle('Vous marquez un point.')
         .setDescription(`"Heille bravo ${message.author.username}. C'était vraiment beau ça."`)
         .attachFiles(['./commands/games/ball-img/user_point.gif'])
@@ -72,6 +80,7 @@ module.exports = class Ball extends Command {
 
         const embedUserMiss = new Discord.MessageEmbed()
         .setColor('#0099ff')
+        .setAuthor(message.author.username, message.author.displayAvatarURL())
         .setTitle('Vous manquez le panier.')
         .setDescription(`"Come on ${message.author.username}, t'es poche!"`)
         .attachFiles(['./commands/games/ball-img/user_miss.gif'])
