@@ -216,7 +216,7 @@ setInterval(() => {
         .setImage('attachment://no.gif');
 
         if (message.content.toLowerCase().replace(/é/g,'e')
-        .startsWith('cedric est') || message.content.toLowerCase()
+        .startsWith('cedric es') || message.content.toLowerCase()
         .replace(/é/g,'e').startsWith('cedric peu') || message.content
         .toLowerCase().replace(/é/g,'e').startsWith('cedric va') || message
         .content.toLowerCase().replace(/é/g,'e').startsWith('cedric a') ||
