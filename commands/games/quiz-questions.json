@@ -106,9 +106,21 @@
     {
         "question": "**À quel lac québécois ont eu lieu les négociations entre Brian Mulroney et les dix Premiers ministres provinciaux sur les réformes constitutionnelles?**",
         "answers": ["Le lac Meech", "Lac Meech", "Meech"]
+    },
+
+    {
+        "question": "**Combien de fleurs de lys y a-t-il sur la drapeau du Québec?",
+        "answers": ["4"]
+    },
+
+    {
+        "question": "**Quel est le nom de l'homme politique et homme d'affaires surnommé « King *hof* the Gatineau »?**",
+        "answers": ["Alonzo Wright"]
+    },
+
+    {
+        "question": "**Quel explorateur français a planté la Croix de Gaspé au nom du roi François 1er?**",
+        "answers": ["Jacques Cartier"]
     }
-
-
-
 
 ]
