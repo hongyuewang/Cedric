@@ -247,7 +247,7 @@ setInterval(() => {
             const randomLocationName = locations[randomNumber].name;
             const randomLocationImage = new
             Discord.MessageEmbed().setImage(locations[randomNumber].image);
-            message.channel.send(`**` + randomLocationName + `**`);
+            message.channel.send(randomLocationName);
             if (locations[randomNumber].image != undefined) {
                 message.channel.send(randomLocationImage);
             }
