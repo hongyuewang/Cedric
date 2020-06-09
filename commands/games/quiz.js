@@ -29,6 +29,8 @@ class Player {
     }
 }
 
+isActiveQuiz = false;
+
 module.exports = class Quiz extends Command {
     constructor(bot) {
         super(bot, {
@@ -40,6 +42,12 @@ module.exports = class Quiz extends Command {
     }
 
     async run(message) {
+        this.client.dispatcher.addInhibitor(() => {
+            return isActiveQuiz;
+        });
+
+        isActiveQuiz = true;
+
         var questionsAsked = 0;
         let playerArray = [];
 
@@ -65,7 +73,7 @@ module.exports = class Quiz extends Command {
 
             const allMessagesFilter = m => m.author.id != "708042232292180011";
 
-            const allCollector = message.channel.createMessageCollector(allMessagesFilter, { time: 3015000 });
+            const allCollector = message.channel.createMessageCollector(allMessagesFilter, { time: 150000 }); // CHANGE AT THE SAME TIME AS QUIZ LENGTH
 
             allCollector.on('collect', m => {
 	               console.log(`Collected ${m.content}`);
@@ -105,6 +113,7 @@ module.exports = class Quiz extends Command {
                         for (var player of playerArray) {
                             message.channel.send(`**${player.username}**: ${player.score} points`);
                         }
+                        isActiveQuiz = false;
                     }
                 })
                 .catch(collected => {
@@ -125,6 +134,7 @@ module.exports = class Quiz extends Command {
                         for (var player of playerArray) {
                             message.channel.send(`**${player.username}**: ${player.score} points`);
                         }
+                        isActiveQuiz = false;
                     }
                 });
             });
