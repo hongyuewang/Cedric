@@ -25,7 +25,6 @@ setInterval(() => {
     .registerDefaultTypes()
     .registerGroups([
         ['facts', 'Facts'],
-        ['greetings', 'Greetings'],
         ['games', 'Games']
     ])
     .registerDefaultGroups()

@@ -51,7 +51,13 @@ module.exports = class Quiz extends Command {
 
         function play() {
             var randomIndex = Math.floor(Math.random() * quiz.length);
-            var item = quiz[randomIndex];
+            var item;
+
+            while (quiz[randomIndex].question == undefined) {
+                randomIndex = Math.floor(Math.random() * quiz.length);
+            }
+            item = quiz[randomIndex];
+
             const filter = response => {
                 return item.answers.some(answer => answer.toLowerCase() ===
                 response.content.toLowerCase());
