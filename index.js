@@ -16,7 +16,7 @@ setInterval(() => {
     const path = require('path');
 
     const bot = new CommandoClient({
-        commandPrefix: 'ced!',
+        commandPrefix: 'ced.',
         owner: '306624719338209282'
     });
 
