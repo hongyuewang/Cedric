@@ -47,5 +47,25 @@
     {
         "name": "Le référendum de 1995",
         "type": "STREAMING"
+    },
+
+    {
+        "name": "Badlion Client",
+        "type": "PLAYING"
+    },
+
+    {
+        "name": "God Is An American",
+        "type": "LISTENING"
+    },
+
+    {
+        "name": "Family Guy",
+        "type": "WATCHING"
+    },
+
+    {
+        "name": "Les Simpsons",
+        "type": "WATCHING"
     }
 ]
