@@ -20,5 +20,7 @@ module.exports = class Geocaching extends Command {
         });
 
         isActiveGeocaching = true;
+
+        message.channel.send("`L ' O D Y S S É E  D U  G E O C A C H E U R`");
     }
 }

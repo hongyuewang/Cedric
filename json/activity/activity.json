@@ -1,0 +1,51 @@
+[
+    {
+        "name": "Bon Cop, Bad Cop",
+        "type": "WATCHING"
+    },
+
+    {
+        "name": "Lettre à Lévesque",
+        "type": "LISTENING"
+    },
+
+    {
+        "name": "Minecraft",
+        "type": "PLAYING"
+    },
+
+    {
+        "name": "Elvis Gratton",
+        "type": "WATCHING"
+    },
+
+    {
+        "name": "J’ai tué ma mère",
+        "type": "WATCHING"
+    },
+
+    {
+        "name": "L'amour globale",
+        "type": "WATCHING"
+    },
+
+    {
+        "name": "Minesweeper",
+        "type": "PLAYING"
+    },
+
+    {
+        "name": "Jesus He Knows Me",
+        "type": "LISTENING"
+    },
+
+    {
+        "name": "Hey Jude",
+        "type": "LISTENING"
+    },
+
+    {
+        "name": "Le référendum de 1995",
+        "type": "STREAMING"
+    }
+]
