@@ -8,7 +8,7 @@ app.get("/", (request, response) => {
 app.listen(process.env.PORT);
 setInterval(() => {
     http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
-    }, 180000);
+    }, 280000);
 
     var moment = require('moment-timezone');
     const Discord = require('discord.js');
