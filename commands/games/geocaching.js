@@ -108,7 +108,7 @@ module.exports = class Geocaching extends Command {
 
             {
                 id: 3,
-                text: "Cédric dit au revoir à ses parents et sort de sa maison. Il ouvre l'application de géocaching et voit qu'il y a deux caches intéressantes dans les environs. Il y a une cache à côté du Canadian Tire placée en 2007, mais il y a ainsi une nouvelle cache dans le forêt Boucher: elle a été placée hier.\nQuelle cache devrait Cédric poursuivre?",
+                text: "Cédric dit au revoir à ses parents et sort de sa maison. Il ouvre l'application de géocaching et voit qu'il y a deux caches intéressantes dans les environs. Il y a une cache à côté du Canadian Tire placée en 2007, mais il y a aussi une nouvelle cache dans le forêt Boucher: elle a été placée hier.\nQuelle cache devrait Cédric poursuivre?",
                 options: [
 
                     {
@@ -164,7 +164,7 @@ module.exports = class Geocaching extends Command {
 
             {
                 id: 6,
-                text: "Avant qu'il ne puisse d'asseoir, deux employées costauds sortent du magasin et s'emparent de Cédric. Il essait de se libérer de toutes ses forces, mais ils sont trop forts. Il ressent un coup sur sa tête, et tout devient noir.\nLorsqu'il se réveille, il se trouve attaché à un barbecue Cuisinart Gourmet 600B avec une chaîne pour remorque. Un homme chauve se trouve devant lui.\n— Bonjour, Cédric, dit-il avec un sourire malicieux. Un petit oiseau m'a dit que tu es l'employé du mois au Rona. Peut-être que si tu nous dis comment tu as acquis ce... talent, on te laisserait partir.",
+                text: "Avant qu'il ne puisse d'asseoir, deux employées costauds sortent du magasin et s'emparent de Cédric. Il essait de se libérer de toutes ses forces, mais ils sont trop forts. Il ressent un coup sur sa tête, et tout devient noir.\nLorsqu'il se réveille, il se trouve attaché à un barbecue Cuisinart Gourmet 600B avec une chaîne pour remorque. Un homme chauve se trouve devant lui.\n— Bonjour, Cédric, dit-il avec un sourire malicieux. Un petit oiseau m'a dit que tu es l'employé du mois au Rona. Peut-être que si tu nous dissais comment t'as acquis ce... talent, on te laisserait partir.",
                 options: [
                     {
                         text: "A. Révéler le secret",
@@ -200,7 +200,7 @@ module.exports = class Geocaching extends Command {
 
             {
                 id: 8,
-                text: "Malgré la pluie, Cédric continue tout droit sur le sentier. Éventuellement, le chemin se termine. Un arbre mort se tient à la fin de la piste mouillée. En s'approchant, le GPS que Cédric tient s'éteint. Un coyote sort de derrière le tronc.\n— Jeune Québécois, dit l'animal, tu n'es pas au bon endroit. De l'autre côté de la rivière, un être anti-québécois a pris le contrôle du gouvernement canadien. Il est une menace au futur de la Belle Province. Tu dois intervenir! Je ne peux pas te forcer, la décision reste la tienne.",
+                text: "Malgré la pluie, Cédric continue tout droit sur le sentier. Éventuellement, le chemin se termine. Un arbre mort se tient à la fin de la piste mouillée. En s'approchant, le GPS que Cédric tient s'éteint. Un coyote sort de derrière le tronc.\n— Jeune Québécois, dit l'animal, tu n'es pas au bon endroit. De l'autre côté de la rivière, un être anti-québécois a pris le contrôle du gouvernement canadien. Il est une menace au futur de la Belle Province. Tu dois intervenir! Je ne peux pas te forcer, par contre. La décision reste la tienne.",
                 options: [
                     {
                         text: "A. Sauver le Québec",
@@ -236,7 +236,7 @@ module.exports = class Geocaching extends Command {
 
             {
                 id: 10,
-                text: "— Hokay... Je vais vous le dire.\nCédric chuchote le secret dans l'oreille de l'homme chauve. C'est la première fois depuis 1945 que cette connaissance est révélée à un compétiteur du Rona.\n— Un sérum injecté dans les employés? répète l'homme chauve en riant. Wow, je n'ai jamais pensé à ça! Alain, apporte-moi la chainsaw, ça a l'air qu'on doit disséquer ce jeune homme.\nUn mois après sa disparition de Cédric, le Rona où il travaillait ferme ses portes. Les employés du Canadian Tire se sont soudainement avérés plus efficaces que ceux de l'entrepôt bleu. À ce jour, personne ne sait pourquoi.",
+                text: "— Hokay... Je vais vous le dire.\nCédric chuchote le secret dans l'oreille de l'homme chauve. C'est la première fois depuis 1945 que cette connaissance est révélée à un compétiteur du Rona.\n— Un sérum injecté dans les employés? répète l'homme chauve en riant. Wow, je n'ai jamais pensé à ça! Alain, apporte-moi la chainsaw, ça a l'air qu'on doit disséquer ce jeune homme.\nUn mois après la disparition de Cédric, le Rona où il travaillait ferme ses portes. Les employés du Canadian Tire se sont soudainement avérés plus efficaces que ceux de l'entrepôt bleu. À ce jour, personne ne sait pourquoi.",
                 options: [
                     {
                         text: "A. Recommencer",
@@ -272,7 +272,7 @@ module.exports = class Geocaching extends Command {
 
             {
                 id: 12,
-                text: "— Minecraft? Ye je suis down de jouer.\nCédric suit Buiel jusqu'à la maison de ce dernier. Ils jouent à Factions au point de s'évanouir. La cactus farm ne valait vraiment pas la peine.",
+                text: "— Minecraft? Ye je suis down de jouer.\nCédric suit Buiel jusqu'à sa maison. Ils jouent à Factions au point de s'évanouir. La cactus farm ne valait vraiment pas la peine.",
                 options: [
                     {
                         text: "A. Recommencer",
@@ -309,7 +309,7 @@ module.exports = class Geocaching extends Command {
 
             {
                 id: 14,
-                text: "— Hokay, j'accepte, dit Cédric. Le coyote gratte le tronc et un morceau de l'écorce tombe pour révéler un trou dans l'arbre. L'animal disparaît dans l'ouverture. Cédric le suit. Il se trouve dans l'obscurité totale pour quelques secondes, mais il voit ensuite un rayon lumineux au bout du tunnel. En sortant, il remarque d'abord qu'il ne pleut plus. Ensuite, il voit qu'il est à un arrêt de bus sur Saint-Raymond et que le coyote a disparu. Dernièrement, Cédric voit à sa surprise un requin à quelques mètres de lui. Le poisson s'approche en sifflant, le bout de sa queue baladant comme une paire de jambes.\n— Yo what's up, dit le requin, moi c'est Laurent Shark. Je vois que t'as accepté la quête. Il faut juste que t'embarques sur mon dos et je t'amènerai au parlement.",
+                text: "— Hokay, j'accepte, dit Cédric. Le coyote gratte le tronc et un morceau de l'écorce tombe pour révéler un trou dans l'arbre. L'animal disparaît dans l'ouverture et Cédric le suit. Il se trouve dans l'obscurité totale pour quelques secondes, mais il voit ensuite un rayon lumineux au bout du tunnel. En sortant, il remarque d'abord qu'il ne pleut plus. Ensuite, il voit qu'il est à un arrêt de bus sur Saint-Raymond et que le coyote a disparu. Dernièrement, Cédric voit à sa surprise un requin à quelques mètres de lui. Le poisson s'approche en sifflant, le bout de sa queue baladant comme une paire de jambes.\n— Yo what's up, dit le requin, moi c'est Laurent Shark. Je vois que t'as accepté la quête. Il faut juste que t'embarques sur mon dos et je t'amènerai au parlement.",
                 options: [
                     {
                         text: "A. Embarquer sur Laurent",
@@ -429,7 +429,7 @@ module.exports = class Geocaching extends Command {
 
             {
                 id: 21,
-                text: "— Non, vous êtes en train d'abuser là! J'ai déjà fait cinq shifts cette semaine là! Come on!\nSon gérant abasourdi par la réaction de son employé, se demande comment un jeune homme qui est habituellement docile peut devenir si indépendant. Ça doit être son côté souverainiste.\n— Désolé, Cédric, dit-il, ton comportement est inacceptable. Tu es congédié.\n Cédric est ébahi; les mots lui manquent. Il part de l'entrepôt en silence, le coeur brisé. Il aurait dû se douter du côté capitaliste sauvage et du sentiment anti-souverainiste du Rona. Après tout, il s'agit d'une compagnie américaine.",
+                text: "— Non, vous êtes en train d'abuser là! J'ai déjà fait cinq shifts cette semaine là! Come on!\nSon gérant, abasourdi par la réaction de son employé, se demande comment un jeune homme qui est habituellement docile peut devenir si ... indépendant.\n— Désolé, Cédric, dit-il. Ton comportement est inacceptable. Tu es congédié.\n Cédric est ébahi; les mots lui manquent. Il part de l'entrepôt en silence, le coeur brisé. Il aurait dû se douter du côté capitaliste sauvage et du sentiment anti-souverainiste du Rona. Après tout, il s'agit d'une compagnie américaine.",
                 options: [
                     {
                         text: "A. Recommencer",
@@ -465,7 +465,7 @@ module.exports = class Geocaching extends Command {
 
             {
                 id: 23,
-                text: "Laurent fonce vers la rive, mais il est violemment repoussé par une vague, en raison de la loi céleste « Chilling on the beach, Laurent can't reach ». Cédric "
+                text: "Laurent fonce vers la rive, mais il est violemment repoussé par une vague, en raison de la loi céleste « Chilling on the beach, Laurent can't reach ». Cédric tombe du dos du poisson et s'accroche à un rocher avant qu'il ne puisse"
             }
         ]
 
