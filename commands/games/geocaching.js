@@ -345,7 +345,7 @@ module.exports = class Geocaching extends Command {
 
             {
                 id: 16,
-                text: "Il fait sombre à l'intérieur de la cabane. Un fort bourdonnement vient du fond de la salle. Cédric suit la source du son et découvre une porte qui mène à une espèce de sous-soul. Il descend les escaliers et voit une machine cylindrique peinturée en rouge. Sur la surface latérale est écrit: Sharkiller F-14. Dû aux vibrations provenant du tueur de requin, Cédric n'entend pas les deux agents fédéraux qui sont sortis de leur cachette courir vers lui. Il est plaqué par les deux hommes.\n— Vous êtes en état d'arrest pour tresspassing du property de le gouvernement fédéral, dit un des agents avec un accent ontarien. Don't resist.\nCédric a été retenu prisonnier dans la base militaire secrète pendant deux jours. Il a été relâché en raison de l'absence de panneaux d'avertissements devant le chalet. Par contre, un colonel lui a demandé de ne jamais révéler ce qu'il a vu ce jour-là. Sinon, il y aura des conséquences. Ainsi commence le génocide des requins parlants. Un par un, ces êtres mystiques disparaissent du Canada. Et le monde ne saura jamais pourquoi, à moins que Cédric brise son silence.",
+                text: "Il fait sombre à l'intérieur de la cabane. Un fort bourdonnement vient du fond de la salle. Cédric suit la source du son et découvre une porte qui mène à une espèce de sous-soul. Il descend les escaliers et voit une machine cylindrique peinturée en rouge. Sur la surface latérale est écrit: Sharkiller F-14. Dû aux vibrations provenant du tueur de requin, Cédric n'entend pas les deux agents fédéraux qui sont sortis de leur cachette courir vers lui. Il est plaqué par les deux hommes.\n— Vous êtes en état d'arrest pour tresspassing du property de le gouvernement fédéral, dit un des agents avec un accent ontarien. Don't resist.\nCédric a été retenu prisonnier dans la base militaire secrète pendant deux jours. Il a été relâché car il parlait trop. Par contre, il a été averti que si jamais il révèle ce qu'il a vu ce jour-là, il disparaîtrait sans laisser de trace... Ainsi commence le génocide des requins parlants. Un par un, ces êtres mystiques disparaissent du Canada. Et le monde ne saura jamais pourquoi, à moins que Cédric brise son silence.",
                 options: [
                     {
                         text: "A. Recommencer",
@@ -452,20 +452,44 @@ module.exports = class Geocaching extends Command {
                     {
                         text: "A. Aller au parlement",
                         letter: "A",
-                        next: 0
+                        next: 24
                     },
 
                     {
                         text: "B. Explorer les tunnels",
                         letter: "B",
-                        next: 0
+                        next: 25
                     }
                 ]
             },
 
             {
                 id: 23,
-                text: "Laurent fonce vers la rive, mais il est violemment repoussé par une vague, en raison de la loi céleste « Chilling on the beach, Laurent can't reach ». Cédric tombe du dos du poisson et s'accroche à un rocher avant qu'il ne puisse"
+                text: "Laurent fonce vers la rive, mais il est violemment repoussé par une vague, en raison de la loi céleste « Chilling on the beach, Laurent can't reach ». Cédric et le requin sont séparés par le flot. Le jeune québécois nage vers la plage et réussit à atteindre la terre ferme sain et sauf. Il se retourne et voit que Laurent n'a pas été aussi chanceux : il est pris dans un filet géant qui a été jeté du vaisseau.\n— Sauve toi, man, dit Laurent Shark. Il est trop tard pour moi... Je perds mon pouvoir, on est dans les eaux ontariennes maintenant...",
+                options: [
+                    {
+                        text: "A. Retirer la bouteille d'eau de son sac à dos et la lancer à Laurent",
+                        letter: "A",
+                        requiredState: (currentState) => currentState.bottle,
+                        next: 26
+                    },
+
+                    {
+                        text: "B. Fuir",
+                        letter: "B",
+                        next: 27
+                    }
+                ]
+            },
+
+            {
+                id: 24,
+                text: "Cédric arrive sur la colline parlementaire. En s’approchant des escaliers de l’édifice, il remarque un Bull terrier blanc couché devant les portes de bois.\n— Walter, dit le chien d'une voix enfantine. M'appelle Walter. Je connais le parly, suis-moi.\nWalter se tourne vers l'entrée du parlement et les portes s'ouvrent comme par magie. Cédric entre dans",
+                options: [
+                    {
+                        text: "A."
+                    }
+                ]
             }
         ]
 

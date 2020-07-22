@@ -96,7 +96,8 @@ bot.on('message', async (message) => {
 
         "Le Québec *his* my *ome*. Bin kin, comme mon *ome* dans Minecraft!",
 
-        "Au Québec, on est une nation. On a notre propre identité au Québec. " + "On est différent du reste du Canada. On a notre propre culture. Une "
+        "Au Québec, on est une nation. On a notre propre identité au Québec. "
+        + "On est différent du reste du Canada. On a notre propre culture. Une "
         + "super belle culture. On a la Saint-Jean, des usines québécoises. "
         + "On a de la bonne bière. Genre en revenant de la job, je prends souvent de l'Unibroue ou de l'Archibald. C'est super bon. Au "
         + "Vieux-Hull, il y a des bonnes brasseries.",
@@ -210,6 +211,66 @@ bot.on('message', async (message) => {
         message.channel.send("McFarlane c’est pas un républicain, c’est un"
         + " démocrate, so c’est chill! C’est pas genre le gros américain"
         + " capitaliste sauvage.");
+    }
+});
+
+/* The Generation Command: Cédric talks about Gen-Z*/
+bot.on('message', async (message) => {
+
+    if ( (message.content.toLowerCase().replace(/é/g,'e').includes("generation"))) {
+        if (message.author.id === bot.user.id) return;
+        message.channel.send("Les générations?");
+        await new Promise(resolve => setTimeout(resolve, 2000));
+        message.channel.send("Ye les personnes âgés n’aiment pas les jeunes");
+        await new Promise(resolve => setTimeout(resolve, 5000));
+        message.channel.send("C’est une génération chialeuse");
+        await new Promise(resolve => setTimeout(resolve, 8000));
+        message.channel.send("Jme demande si on sera de même plus tard. J’espère que non 🤞");
+        await new Promise(resolve => setTimeout(resolve, 10000));
+        message.channel.send("Mais avec l’immigration, la naissance de "
+        + "d’autres parties politiques et plusieurs facteurs, nous "
+        + "semblons être une génération plus tolérante");
+        await new Promise(resolve => setTimeout(resolve, 8000));
+        message.channel.send("C’est juste qui faut pas trop se radicalisé "
+        + "vers la gauche et ça sera all good");
+        await new Promise(resolve => setTimeout(resolve, 9000));
+        message.channel.send("Je sais.. Mon sujet de conversation n’a "
+        + "aucun rapport avec le principe de la convo mais bon");
+        await new Promise(resolve => setTimeout(resolve, 10000));
+        message.channel.send("Comme je l’ai dis plus tôt, la génération "
+        + "Z semble être une génération plus tolérante que les boomers du premier regard.");
+        await new Promise(resolve => setTimeout(resolve, 10000));
+        message.channel.send("Cela est en effet des facts puisque la "
+        + "tolérance et le jugement de la plupart des individus de notre "
+        + "génération demeure assez modéré contrairement à ceux qui sont d’âge d’or.");
+        await new Promise(resolve => setTimeout(resolve, 10000));
+        message.channel.send("Regardez mon patron par exemple. Lorsqu’il "
+        + "voit deux homosexuels dans un magasin, il est super étonné de "
+        + "la première vue. Il dit tout doucement « eh tabarnak.. ».");
+        await new Promise(resolve => setTimeout(resolve, 10000));
+        message.channel.send("Cependant, je ne peux point me baser "
+        + "là-dessus, car mes propos sont stéréotypés. Alors, allons cette "
+        + "fois-ci dans les réseaux sociaux pour se baser sur le jugement "
+        + "des personnes âgées vu que c’est une excellence source pour "
+        + "arriver à des résultats concrets.");
+        await new Promise(resolve => setTimeout(resolve, 10000));
+        message.channel.send("Ceux-ci se lamente beaucoup au sujet des "
+        + "personnalités publiques que ce soit dans le monde de la "
+        + "politique, du divertissement, etc.");
+        await new Promise(resolve => setTimeout(resolve, 10000));
+        message.channel.send("L’attaque personnelle est une arme qui est "
+        + "très utilisée par les personnes au-dessus de 65 ans et cela a "
+        + "crée le meme du « ok boomer » qui a malheureusement été "
+        + "surutilisé par la génération Z et même critiqué par le monde de la génération X.");
+        await new Promise(resolve => setTimeout(resolve, 10000));
+        message.channel.send("Le monde de la génération Y semble neutre à "
+        + " se sujet. Bref... (suite de mon analyse dans les prochaines "
+        + " au sujet de la génération Z");
+        await new Promise(resolve => setTimeout(resolve, 3000));
+        message.channel.send("Les prochains temps*");
+        await new Promise(resolve => setTimeout(resolve, 10000));
+        message.channel.send("Et en ajoutant une source, le réseau sociaux "
+        + "que je me réfère davantage est bien évidemment facebook");
     }
 });
 
