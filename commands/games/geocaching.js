@@ -375,7 +375,7 @@ module.exports = class Geocaching extends Command {
 
             {
                 id: 18,
-                text: "Les portes automatiques du magasin éclatent en un million de morceaux. Un détachement spécial des employés du Rona entrent dans le bâtiment avec des fusils remplis de peinture Sico évolution et arrosent l'homme chauve et ses soldats du mal. Un employé utilise une scie circulaire Bosch de 6 1/2\" pour libérer Cédric.\nAprès l'avoir reconduit au Rona, le gérant de Cédric lui demande s'il voudrait faire un shift ce soir.",
+                text: "Les portes automatiques du magasin éclatent en un million de morceaux. Un détachement spécial des employés du Rona entrent dans le bâtiment avec des fusils remplis de peinture Sico évolution et arrosent l'homme chauve et ses soldats du mal. Un employé utilise une scie circulaire Bosch de 6 1/2 pour libérer Cédric.\nAprès l'avoir reconduit au Rona, le gérant de Cédric lui demande s'il voudrait faire un shift ce soir.",
                 options: [
                     {
                         text: "A. Travailler ce soir",
@@ -484,12 +484,25 @@ module.exports = class Geocaching extends Command {
 
             {
                 id: 24,
-                text: "Cédric arrive sur la colline parlementaire. En s’approchant des escaliers de l’édifice, il remarque un Bull terrier blanc couché devant les portes de bois.\n— Walter, dit le chien d'une voix enfantine. M'appelle Walter. Je connais le parly, suis-moi.\nWalter se tourne vers l'entrée du parlement et les portes s'ouvrent comme par magie. Cédric entre dans",
+                text: "Cédric arrive sur la colline parlementaire. Il commence à avoir des doutes, mais malgré s'il a peur, il doit affronter la chose qui réside au parlement, car il est un Québécois. En s’approchant des escaliers de l’édifice, il remarque un Bull terrier blanc couché devant les portes de bois.\n— Walter, dit le chien d'une voix enfantine. M'appelle Walter. Je connais le parly, suis-moi.\nWalter se tourne vers l'entrée du parlement et les portes s'ouvrent comme par magie.",
                 options: [
                     {
-                        text: "A."
+                        text: "A. Suivre Walter",
+                        letter: "A",
+                        next: 0
+                    },
+
+                    {
+                        text: "B. Refuser d'écouter le chien",
+                        letter: "B",
+                        next:0
                     }
                 ]
+            },
+
+            {
+                id: 25,
+                text: "Cédric décide de suivre son instinct et entre dans le tunnel sombre. Il voit une lueur bleue émaner du mur. En s'approchant de la source de lumière, il voit qu'il y a une épée encastrée dans la maçonnerie. Il met sa main sur la surface, faisant craque la paroi du tunnel. Cédric retire l'épée et voit qu'il y a un message gravé dans la lame: « Forgé par Samuel de Champlain pour le futur de Québec »."
             }
         ]
 
