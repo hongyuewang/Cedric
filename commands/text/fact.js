@@ -6,7 +6,7 @@ module.exports = class Fact extends Command {
         super(bot, {
             name: 'fact',
             aliases: ['fait', 'funfact'],
-            group: 'facts',
+            group: 'text',
             memberName: 'fact',
             description: 'Spits out a fun fact...in french, of course.'
         });

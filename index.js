@@ -13,7 +13,7 @@ const bot = new CommandoClient({
 bot.registry
 .registerDefaultTypes()
 .registerGroups([
-    ['facts', 'Facts'],
+    ['text', 'Text'],
     ['games', 'Games']
 ])
 .registerDefaultGroups()
@@ -154,7 +154,6 @@ bot.on('message', async (message) => {
 
 // The Anti-Quebec Command: Cédric responds to whoever suggests that Quebec is not a country.
 bot.on('message', async (message) => {
-
     if ( (message.content.toLowerCase().includes('quebec')  ||
     message.content.toLowerCase().includes('québec') ) && message.content
     .toLowerCase().includes('pas') && message.content.toLowerCase()
@@ -216,7 +215,6 @@ bot.on('message', async (message) => {
 
 /* The Generation Command: Cédric talks about Gen-Z*/
 bot.on('message', async (message) => {
-
     if ( (message.content.toLowerCase().replace(/é/g,'e').includes("generation"))) {
         if (message.author.id === bot.user.id) return;
         message.channel.send("Les générations?");
@@ -271,6 +269,30 @@ bot.on('message', async (message) => {
         await new Promise(resolve => setTimeout(resolve, 10000));
         message.channel.send("Et en ajoutant une source, le réseau sociaux "
         + "que je me réfère davantage est bien évidemment facebook");
+    }
+});
+
+// The Dhar Mann Command: Cédric talks about Dhar Mann and sitcoms
+bot.on('message', async (message) => {
+    if ((message.content.toLowerCase().includes('man'))) {
+        if (message.author.id === bot.user.id) return;
+        message.channel.send("Man? Comme Dhar Mann?");
+        await new Promise(resolve => setTimeout(resolve, 2000));
+        message.channel.send("Dhar mann garde toujours le même fking "
+        + "pattern dans ses scénarios et c’est grâce à ça qui se faire "
+        + "pleins de cash vu que c’est quirky.");
+        await new Promise(resolve => setTimeout(resolve, 10000));
+        message.channel.send("Les Américains aiment le quirkyness. C’est "
+        + "ça qui attire les jeunes");
+        await new Promise(resolve => setTimeout(resolve, 10000));
+        message.channel.send("Genre les séries avec des rires dans "
+        + "le background");
+        await new Promise(resolve => setTimeout(resolve, 10000));
+        message.channel.send("Jsp. Genre check les vieilles séries de "
+        + "disney channel ou genre des séries genre F.R.I.E.N.D.S ou big "
+        + "band theory pour les plus intellos. Ça l’a toujours des rires "
+        + "dans les backgrounds pour inciter les téléspectateurs à rire "
+        + "et toujours regarder la série");
     }
 });
 

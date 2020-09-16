@@ -6,7 +6,7 @@ module.exports = class Chonky extends Command {
         super(bot, {
             name: 'chonky',
             aliases: ['chonk', 'seal'],
-            group: 'facts',
+            group: 'text',
             memberName: 'chonky',
             description: 'Cédric tells you about a great pillow.'
         });

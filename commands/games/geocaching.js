@@ -468,15 +468,15 @@ module.exports = class Geocaching extends Command {
                 text: "Laurent fonce vers la rive, mais il est violemment repoussé par une vague, en raison de la loi céleste « Chilling on the beach, Laurent can't reach ». Cédric et le requin sont séparés par le flot. Le jeune québécois nage vers la plage et réussit à atteindre la terre ferme sain et sauf. Il se retourne et voit que Laurent n'a pas été aussi chanceux : il est pris dans un filet géant qui a été jeté du vaisseau.\n— Sauve toi, man, dit Laurent Shark. Il est trop tard pour moi... Je perds mon pouvoir, on est dans les eaux ontariennes maintenant...",
                 options: [
                     {
-                        text: "A. Retirer la bouteille d'eau de son sac à dos et la lancer à Laurent",
+                        text: "A. Fuir",
                         letter: "A",
-                        requiredState: (currentState) => currentState.bottle,
                         next: 26
                     },
 
                     {
-                        text: "B. Fuir",
+                        text: "B. Retirer la bouteille d'eau de son sac à dos et la lancer à Laurent",
                         letter: "B",
+                        requiredState: (currentState) => currentState.bottle,
                         next: 27
                     }
                 ]
@@ -495,14 +495,45 @@ module.exports = class Geocaching extends Command {
                     {
                         text: "B. Refuser d'écouter le chien",
                         letter: "B",
-                        next:0
+                        next: 0
                     }
                 ]
             },
 
             {
                 id: 25,
-                text: "Cédric décide de suivre son instinct et entre dans le tunnel sombre. Il voit une lueur bleue émaner du mur. En s'approchant de la source de lumière, il voit qu'il y a une épée encastrée dans la maçonnerie. Il met sa main sur la surface, faisant craque la paroi du tunnel. Cédric retire l'épée et voit qu'il y a un message gravé dans la lame: « Forgé par Samuel de Champlain pour le futur de Québec »."
+                text: "Cédric décide de suivre son instinct et entre dans le tunnel sombre. Il voit une lueur bleue émaner du mur. En s'approchant de la source de lumière, il voit qu'il y a une épée encastrée dans la maçonnerie. Il met sa main sur la surface, faisant craque la paroi du tunnel. Cédric retire l'épée et voit qu'il y a un message gravé dans la lame: « Forgé par Samuel de Champlain pour le futur de Québec ».",
+                options: [
+                    {
+                        text: "A. Prendre l'épee",
+                        letter: "A",
+                        next: 0
+                    },
+
+                    {
+                        text: "B. Laisser l'épee dans le tunnel",
+                        letter: "B",
+                        next: 0
+                    }
+
+                ]
+            },
+
+            {
+                id: 26,
+                text: "Cédric abandonne Laurent à Antishark et se dirige vers le musée."
+            },
+
+            {
+                id: 27,
+                text: "L'eau québécoise de la bouteille alimente le pouvoir divin de Laurent Shark. Il déchire le filet avec ses dents et se libère de sa prison fédéraliste. Avec sa queue de requin, il réussit à faire couler le navire. Il nage jusqu'au bord de la rivière pour rejoindre Cédric. Ce dernier embarque sur son dos.",
+                options: [
+                    {
+                        text: "A. Retourner au barrage",
+                        letter: "A",
+                        next: 22
+                    }
+                ]
             }
         ]
 

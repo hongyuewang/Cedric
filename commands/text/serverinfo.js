@@ -5,7 +5,7 @@ module.exports = class ServerInfo extends Command {
         super(bot, {
             name: 'server',
             aliases: ['serverinfo'],
-            group: 'facts',
+            group: 'text',
             memberName: 'serverinfo',
             description: 'Information on the server the command was invoked in.'
         });
