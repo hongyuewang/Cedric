@@ -16,8 +16,6 @@ bot.registry
     ['text', 'Text'],
     ['games', 'Games']
 ])
-.registerDefaultGroups()
-.registerDefaultCommands()
 .registerCommandsIn(path.join(__dirname, 'commands'));
 
 // Login
