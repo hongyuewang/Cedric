@@ -14,7 +14,8 @@ bot.registry
 .registerDefaultTypes()
 .registerGroups([
     ['text', 'Text'],
-    ['games', 'Games']
+    ['games', 'Games'],
+    ['admin', 'Admin']
 ])
 .registerCommandsIn(path.join(__dirname, 'commands'));
 
@@ -74,6 +75,13 @@ bot.on('message', message => {
     console.log(localTime.hour() + ":"+ localTime.minutes() + ":" + localTime.seconds());
 });
 
+// Overlord Command
+bot.on('message', message => {
+    if (message.content == "ced!overlord" || message.content == "ced!kill") {
+        message.channel.send('Restarting...');
+        process.exit();
+    }
+});
 
 // Keyword Commands
 
