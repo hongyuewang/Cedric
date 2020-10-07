@@ -302,6 +302,54 @@ bot.on('message', async (message) => {
     }
 });
 
+// The Exam Command: Cédric talks about his philosophy exam
+bot.on('message', async (message) => {
+    if ((message.content.toLowerCase().includes('philo'))) {
+        if (message.author.id === bot.user.id) return;
+        message.channel.send("Les examens?");
+        await new Promise(resolve => setTimeout(resolve, 2000));
+        message.channel.send("En philo, j’étudiais sur le psychisme "
+        + "et l’inconscient. Ça m’en fait apprendre davantage sur ce que "
+        + "nous sommes apparement");
+        await new Promise(resolve => setTimeout(resolve, 10000));
+        message.channel.send("C’est tellement pas clair à propos de l’exam. On a aucun document ou rien");
+        await new Promise(resolve => setTimeout(resolve, 10000));
+        message.channel.send("Apparemment c’est aujourd’hui, mais pour vrai j’ai aucune idée");
+        await new Promise(resolve => setTimeout(resolve, 10000));
+        message.channel.send("Check dans le plan de cours");
+        await new Promise(resolve => setTimeout(resolve, 3000));
+        message.channel.send("Mais ya donné aucune informations");
+        await new Promise(resolve => setTimeout(resolve, 7000));
+        message.channel.send("Le dude est tellement perché. Lui aussi c’est un cas particulier");
+        await new Promise(resolve => setTimeout(resolve, 7000));
+        message.channel.send("Jpense que ça va être bin chill tkt");
+        await new Promise(resolve => setTimeout(resolve, 10000));
+        message.channel.send("C’est au sujet de la conscience, du "
+        + "côté collectif et tout un paquet d’affaire qui est assez "
+        + "facile à reformuler");
+        await new Promise(resolve => setTimeout(resolve, 10000));
+        message.channel.send("Attend m’a checker dans la vidéo");
+        await new Promise(resolve => setTimeout(resolve, 20000));
+        message.channel.send("Bro ya aucun document ou rien haha");
+        await new Promise(resolve => setTimeout(resolve, 10000));
+        message.channel.send("Je pense pas que l'exam est aujourd'hui. On va "
+        + "voir. J’ai des doutes quand même. C’est quand même weird de donner "
+        + "un exam quand il y a legit aucune préparation concrète");
+        await new Promise(resolve => setTimeout(resolve, 10000));
+        message.channel.send("Même dans le plan de cours ya très "
+        + "peu d’information");
+        await new Promise(resolve => setTimeout(resolve, 10000));
+        message.channel.send("Pi ofc yé pas là attend haha");
+        await new Promise(resolve => setTimeout(resolve, 10000));
+        message.channel.send("Le dude est pas là pour moi haha");
+        await new Promise(resolve => setTimeout(resolve, 10000));
+        message.channel.send("Pour moi yé juste pas là hahaha");
+        await new Promise(resolve => setTimeout(resolve, 10000));
+        message.channel.send("Esti que ça dead🤣");
+    }
+});
+
+
 // The Question Command: Cédric answers anything.
 
 bot.on('message', async (message) => {
