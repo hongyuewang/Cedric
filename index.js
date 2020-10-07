@@ -77,7 +77,7 @@ bot.on('message', message => {
 
 // Overlord Command
 bot.on('message', message => {
-    if (message.content == "ced!overlord" || message.content == "ced!kill") {
+    if (message.content == "ced!overlord" || message.content.toLowerCase() == "ced!kill") {
         message.channel.send('Restarting...');
         process.exit();
     }
@@ -304,7 +304,7 @@ bot.on('message', async (message) => {
 
 // The Exam Command: Cédric talks about his philosophy exam
 bot.on('message', async (message) => {
-    if ((message.content.toLowerCase().includes('philo'))) {
+    if ((message.content.toLowerCase().includes('exam'))) {
         if (message.author.id === bot.user.id) return;
         message.channel.send("Les examens?");
         await new Promise(resolve => setTimeout(resolve, 2000));
