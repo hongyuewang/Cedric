@@ -31,7 +31,7 @@ module.exports = class Chonky extends Command {
       .send({
         files: [
           {
-            attachment: "./commands/facts/chonky-img/cedric-with-chonky.png",
+            attachment: "./commands/text/chonky-img/cedric-with-chonky.png",
             name: "cedric-with-chonky.png",
           },
         ],
