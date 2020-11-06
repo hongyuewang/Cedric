@@ -461,7 +461,7 @@ bot.on("message", async (message) => {
     await new Promise((resolve) => setTimeout(resolve, 10000));
     message.channel.send(
       "Même encore là c'est encore du monde super discipliné à cause "
-      + "des moments durs qu'ils ont eu dans le passé."
+      + "des moments durs qu'ils ont eus dans le passé."
     );
     await new Promise((resolve) => setTimeout(resolve, 10000));
     message.channel.send(
