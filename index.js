@@ -443,45 +443,45 @@ bot.on("message", async (message) => {
       "Parce que moi économiquement je suis assez de droite. Selon moi tout "
       + "le monde devrait être productif. Ça serait idéal. "
     );
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 10000));
     message.channel.send(
       "En fait il y en a certains qui sont plus productifs que d'autres. "
       + "Moi je suis le genre de gars qui croirait qu'on devrait avoir "
       + "du fascisme dans 10 ans pour renforcer le monde et les rendre "
       + "plus productifs."
     );
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 10000));
     message.channel.send(
       "C'est en les renforçant qu'on va les rendre plus productifs."
     );
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 10000));
     message.channel.send(
       "C'est pour ça que les Allemands étaient plus disciplinés. "
     );
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 10000));
     message.channel.send(
       "Même encore là c'est encore du monde super discipliné à cause "
       + "des moments durs qu'ils ont eu dans le passé."
     );
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 10000));
     message.channel.send(
       "Dans un monde sensible, c'est certain que ça va les traumatiser, "
       + "mais la globalisation va rendre ça plus facile."
     );
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 10000));
     message.channel.send(
       "Je trouve que du fascisme ça va renforcer la société culturellement "
       + "et ça va rapporter tellement beaucoup. "
     );
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 10000));
     message.channel.send(
       "Je suis quelqu'un quand même qui n'aime pas les monopoles. Je suis "
       + "le genre de gars qui enlèverait ce genre de monopole afin "
       + "de renforcer le libre-échange."
     );
-     await new Promise((resolve) => setTimeout(resolve, 1000));
+     await new Promise((resolve) => setTimeout(resolve, 10000));
      message.channel.send("Je suis pas le genre de gars libertarien pur.");
-     await new Promise((resolve) => setTimeout(resolve, 1000));
+     await new Promise((resolve) => setTimeout(resolve, 10000));
      message.channel.send(
        "En plus socialement je suis assez libéral, mais économiquement "
        + "c'est différent"
