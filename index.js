@@ -489,6 +489,39 @@ bot.on("message", async (message) => {
   }
 });
 
+// The RONA command: Cédric talks about his career goals.
+
+bot.on("message", async (message) => {
+  if (message.content.toLowerCase().includes("rona")) {
+    if (message.author.id === bot.user.id) return;
+    message.channel.send("Le RONA?");
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    message.channel.send(
+      "Plus que je travaille au RONA, moins j’ai l’intérêt de rester "
+      + "dans l’établissement."
+    );
+    await new Promise((resolve) => setTimeout(resolve, 10000));
+    message.channel.send("Je ne devrais même pas encourager cette entreprise.");
+    await new Promise((resolve) => setTimeout(resolve, 10000));
+    message.channel.send(
+      "Je préfère voir du monde qui on la passion de vendre des produits "
+      + "de qualité que voir du monde à s’en mettre pleins les poches "
+      + "grâce aux multinationales. "
+    );
+    await new Promise((resolve) => setTimeout(resolve, 10000));
+    message.channel.send(
+      "La quantité vient avant la qualité et c’est pour ça que je vais "
+      + "aller en administration des affaires."
+    );
+    await new Promise((resolve) => setTimeout(resolve, 10000));
+    message.channel.send(
+      "Je pourrais aussi avoir l’option d’être conseiller et je "
+      + "veux encourager ces compagnies locales à grandir au sein "
+      + "de la province québécoise."
+    );
+  }
+});
+
 // The Question Command: Cédric answers anything.
 
 bot.on("message", async (message) => {
