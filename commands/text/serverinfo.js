@@ -14,7 +14,6 @@ module.exports = class ServerInfo extends (
   }
 
   async run(message) {
-    try {
       message.say(
         "Tu veux avoir de l'information sur ce serveur? Why not let's go!"
       );
@@ -31,8 +30,5 @@ module.exports = class ServerInfo extends (
         `Son nombre d'habitants est: **${message.guild.memberCount}**.`
       );
       message.say(`Il est situé au **${message.guild.region}**.`);
-    } catch (error) {
-      console.log(error);
-    }
   }
 };

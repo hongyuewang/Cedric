@@ -15,13 +15,9 @@ module.exports = class Fact extends (
   }
 
   async run(message) {
-    try {
       message.say("Tu veux connaître un fait intéressant?");
       await new Promise((resolve) => setTimeout(resolve, 2000)); // set a pause of 2 seconds
       let randomNumber = Math.floor(Math.random() * funfacts.fact.length);
       message.say(funfacts.fact[randomNumber]);
-    } catch (error) {
-      console.log(error);
-    }
   }
 };

@@ -44,7 +44,6 @@ module.exports = class Quiz extends (
   }
 
   async run(message) {
-    try {
       this.client.dispatcher.addInhibitor(() => {
         return isActiveQuiz;
       });
@@ -177,8 +176,5 @@ module.exports = class Quiz extends (
         });
         delete quiz[randomIndex];
       }
-    } catch (error) {
-      console.log(error);
-    }
   }
 };

@@ -15,7 +15,6 @@ module.exports = class Chonky extends (
   }
 
   async run(message) {
-    try {
       message.channel.send(
         "https://plushiesandco.com/products/angry-seal-pillow"
       );
@@ -43,8 +42,5 @@ module.exports = class Chonky extends (
         .catch(console.error);
       await new Promise((resolve) => setTimeout(resolve, 1000));
       message.channel.send("Voici mon chonky seal de 60 cm!");
-    } catch (error) {
-      console.log(error);
-    }
   }
 };

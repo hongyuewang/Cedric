@@ -15,7 +15,6 @@ module.exports = class Ball extends (
   }
 
   async run(message) {
-    try {
       let choice;
       const embedStart = new Discord.MessageEmbed()
         .setColor("#0099ff")
@@ -173,8 +172,5 @@ module.exports = class Ball extends (
       }
 
       choice = null;
-    } catch (error) {
-      console.log(error);
-    }
   }
 };
