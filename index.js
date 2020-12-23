@@ -11,7 +11,7 @@ const bot = new CommandoClient({
   owner: "306624719338209282",
 });
 
-bot.setMaxListeners(Infinity);
+bot.setMaxListeners(25);
 
 // Registering command groups
 bot.registry
