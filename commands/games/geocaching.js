@@ -4,7 +4,9 @@ const Discord = require("discord.js");
 isActiveGeocaching = false;
 let state = {};
 
-module.exports = class Geocaching extends Command {
+module.exports = class Geocaching extends (
+  Command
+) {
   constructor(bot) {
     super(bot, {
       name: "geocaching",
@@ -536,7 +538,7 @@ module.exports = class Geocaching extends Command {
       {
         id: 25,
         text:
-          "Cédric décide de suivre son instinct et entre dans le tunnel sombre. Il voit une lueur bleue émaner du mur. En s'approchant de la source de lumière, il voit qu'il y a une épée encastrée dans la maçonnerie. Il met sa main sur la surface, faisant craque la paroi du tunnel. Cédric retire l'épée et voit qu'il y a un message gravé dans la lame: « Forgé par Samuel de Champlain pour le futur de Québec ».",
+          "Cédric décide de suivre son instinct et entre dans le tunnel sombre. Il voit une lueur bleue émaner du mur. En s'approchant de la source de lumière, il voit qu'il y a une épée encastrée dans la maçonnerie. Il met sa main sur la surface, faisant craquer la paroi du tunnel. Cédric retire l'épée et voit qu'il y a un message gravé dans la lame: « Forgé par Samuel de Champlain pour le futur de Québec ».",
         options: [
           {
             text: "A. Prendre l'épee",
@@ -580,6 +582,72 @@ module.exports = class Geocaching extends Command {
             text: "A. Retourner au barrage",
             letter: "A",
             next: 22,
+          },
+        ],
+      },
+
+      {
+        id: 28,
+        text:
+          "— On s’en va où, Walter?\n—	À la Chambre des communes, répond le chien. Je t'amène au Baby. Ça fait des jours qu'il refuse de leave le parlement. —	Dababy? demande Cédric. Walter fait non d’un signe de tête. Il semble dégouté.\nIls s’arrêtent devant les portes de la Chambre. Une odeur répugnante inonde les narines du jeune souverainiste. Quelque chose de sinistre se trouve derrière ces portes. Cédric ouvre les portes de bois et entre.\n Il voit un bébé énorme assis sur le siège du Président de la Chambre. Cette créature aussi grosse qu’un ours polaire était enrobée dans une couche souillée Pampers.\n —	Cédricou, dit le Baby. Mon beau souverainiste… Rejoins le côté obscure… Ensemble, nous pourrions conquérir le monde.",
+        options: [
+          {
+            text: "A. Rejoindre le côté obscure",
+            letter: "A",
+            next: 32,
+          },
+
+          {
+            text: "B. Refuser",
+            letter: "B",
+            next: 33,
+          },
+        ],
+      },
+
+      {
+        id: 29,
+        text:
+          "— It’s hokay! Je veux visiter le parlement moi-même. Il bouscule le chien blanc et entre dans l’immeuble. Malheureusement, il se perd aussitôt qu’il met le pied dans le parlement. Tous les couloirs lui semblent pareils : tous les murs ont étés bâtis avec des briques fédéralistes. Plus il avance, moins il voit. Un par un, les lumières du parlement s’éteignent. Au loin, il entend de la musique. Il s’agit de la chanson de Monster Inc. La musique devient de plus en plus forte. Les tympans de Cédric sont sur le point d’éclater. Il sent des gens autour de lui. Ils sont en train de danser. Cette atmosphère est insupportable, mais Cédric ne se plaint pas. Il ne fait que se mettre en boule, car c’est ce que les vrais Québécois font.",
+        options: [
+          {
+            text: "A. Recommencer",
+            letter: "A",
+            next: 0,
+          },
+
+          {
+            text: "B. Quitter",
+            letter: "B",
+            next: -1,
+          },
+        ],
+      },
+
+      {
+        id: 30,
+        text:
+          "Cédric attache l’épée autour de son sac à dos. Il pense qu’elle l’aidera à affronter la créature du parlement.",
+        options: [
+          {
+            text: "A. Aller au parlement",
+            letter: "A",
+            setState: { sword: true },
+            next: 24,
+          },
+        ],
+      },
+
+      {
+        id: 31,
+        text:
+          "Cédric décide de ne pas prendre l’épée. Il ne pense pas qu’elle l’aidera à affronter la créature du parlement.",
+        options: [
+          {
+            text: "A. Aller au parlement",
+            letter: "A",
+            setState: { sword: false },
+            next: 24,
           },
         ],
       },
