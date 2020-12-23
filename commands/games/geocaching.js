@@ -200,7 +200,7 @@ module.exports = class Geocaching extends (
         {
           id: 7,
           text:
-            "Cédric continue sa marche. Au loin, il voit Vincent Buiel sur on vélo qui se dirige vers lui.\n— Yooooo what's hup, Buiel? dit-il à son ami.\n— Hey Cédric, veux-tu venir chez moi pour jouer à Minecraft? demande Buiel. J'ai trouvé un nouveau client qui s'appelle Badlion Client, c'est genre la meilleure chose ever.",
+            "Cédric continue sa marche. Au loin, il voit Vincent Buiel sur un vélo qui se dirige vers lui.\n— Yooooo what's hup, Buiel? dit-il à son ami.\n— Hey Cédric, veux-tu venir chez moi pour jouer à Minecraft? demande Buiel. J'ai trouvé un nouveau client qui s'appelle Badlion Client, c'est genre la meilleure chose ever.",
           options: [
             {
               text: "A. Accepter",
