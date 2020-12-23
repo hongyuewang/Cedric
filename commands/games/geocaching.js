@@ -181,7 +181,7 @@ module.exports = class Geocaching extends (
         {
           id: 6,
           text:
-            "Avant qu'il ne puisse d'asseoir, deux employées costauds sortent du magasin et s'emparent de Cédric. Il essait de se libérer de toutes ses forces, mais ils sont trop forts. Il ressent un coup sur sa tête, et tout devient noir.\nLorsqu'il se réveille, il se trouve attaché à un barbecue Cuisinart Gourmet 600B avec une chaîne pour remorque. Un homme chauve se trouve devant lui.\n— Bonjour, Cédric, dit-il avec un sourire malicieux. Un petit oiseau m'a dit que tu es l'employé du mois au Rona. Peut-être que si tu nous dissais comment t'as acquis ce... talent, on te laisserait partir.",
+            "Avant qu'il ne puisse d'asseoir, deux employées costauds sortent du magasin et s'emparent de Cédric. Il essait de se libérer de toutes ses forces, mais ils sont trop forts. Il ressent un coup sur sa tête, et tout devient noir.\nLorsqu'il se réveille, il se trouve attaché à un barbecue Cuisinart Gourmet 600B avec une chaîne pour remorque. Un homme chauve se trouve devant lui.\n— Bonjour, Cédric, dit-il avec un sourire malicieux. Un petit oiseau m'a dit que tu es l'employé du mois au Rona. Peut-être que si tu nous disais comment t'as acquis ce... talent, on te laisserait partir.",
           options: [
             {
               text: "A. Révéler le secret",
