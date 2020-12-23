@@ -651,6 +651,83 @@ module.exports = class Geocaching extends (
           },
         ],
       },
+
+      {
+        id: 32,
+        text:
+          "— Hokay! répond Cédric avec enthousiasme. Le Baby sourit.\n — Viens ici et mets ça, dit le Baby en lui tendant une couche. Cédric obéit son nouveau maître.\nQuelques mois plus tard, l’Empereur Baby et le Commandant suprême Dubois mènent l’armée impérial du Baby vers Washington afin de conquérir la Maison-Blanche. Le Canada et le nord-est des États-Unis sont déjà sous leur contrôle. En remplaçant le président américain, le Baby se rapprochera de son rêve de conquérir le monde. Des explosions illuminent le ciel du District de Columbia. Cédric sait qu’il est trop tard, mais il ne peut s’empêcher de penser au pays qu’il a trahi. Il pense au Québec.",
+        options: [
+          {
+            text: "A. Recommencer",
+            letter: "A",
+            next: 0,
+          },
+
+          {
+            text: "B. Quitter",
+            letter: "B",
+            next: -1,
+          },
+        ],
+      },
+
+      {
+        id: 33,
+        text:
+          "—Non, it’s hokay, répond Cédric. Ça me tente pas, là…\n — Alors tu mourras. Le Baby descend de sa chaise et court vers le souverainiste. Ses flatulences sont visibles. Cédric doit se défendre.",
+        options: [
+          {
+            text: "A. Lui donner un coup de poing",
+            letter: "A",
+            next: 34,
+          },
+
+          {
+            text: "B. Lui donner un coup d'épée",
+            letter: "B",
+            requiredState: (currentState) => currentState.sword,
+            next: 35,
+          },
+        ],
+      },
+
+      {
+        id: 34,
+        text:
+          "Cédric donne un coup de poing au bébé démoniaque, mais le Baby esquive et mord le jeune Dubois. Le venin de l’enfant monstrueux paralyse son corps et il meurt de déshydration pour prêter hommage à un certain mime bioéthique. ",
+        options: [
+          {
+            text: "A. Recommencer",
+            letter: "A",
+            next: 0,
+          },
+
+          {
+            text: "B. Quitter",
+            letter: "B",
+            next: -1,
+          },
+        ],
+      },
+
+      {
+        id: 35,
+        text:
+          "Cédric sort l’épée de Samuel de Champlain et donne un coup au bébé démoniaque. L’énergie québécoise de la lame tranche la créature, qui entre en combustion spontanée. Ensuite, le plafond de la Chambre des communes s’ouvre et un rayon de lumière divin tombe sur Cédric. Le jeune Dubois commence à flotter vers la source de la lumière et se fait transporter au ciel.\nCédric se trouve face à face avec l’esprit de René Lévesque, qui lui dit :\n— Je suis tellement fier de toi, Cédric. Tu as sauvé le Québec.\nLes deux souverainistes se donnent un long câlin francophone. Lorsque Cédric ouvre ses yeux, il se trouve dans sa chambre. Il sait que son aventure n’était pas un rêve, car il sent la présence du René en lui. Il a été béni. Il est devenu le Fils du Québec, le plus souverainiste des souverainistes.",
+        options: [
+          {
+            text: "A. Recommencer",
+            letter: "A",
+            next: 0,
+          },
+
+          {
+            text: "B. Quitter",
+            letter: "B",
+            next: -1,
+          },
+        ],
+      },
     ];
 
     this.client.dispatcher.addInhibitor(() => {
