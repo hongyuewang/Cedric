@@ -372,7 +372,7 @@ module.exports = class Geocaching extends (
         {
           id: 16,
           text:
-            "Il fait sombre à l'intérieur de la cabane. Un fort bourdonnement vient du fond de la salle. Cédric suit la source du son et découvre une porte qui mène à une espèce de sous-sol. Il descend les escaliers et voit une machine cylindrique peinturée en rouge. Sur la surface latérale est écrit: Sharkiller F-14. Dû aux vibrations provenant du tueur de requin, Cédric n'entend pas les deux agents fédéraux qui sont sortis de leur cachette courir vers lui. Il est plaqué par les deux hommes.\n— Vous êtes en état d'arrest pour tresspassing du property de le gouvernement fédéral, dit un des agents avec un accent ontarien. Don't resist.\nCédric a été retenu prisonnier dans la base militaire secrète pendant deux jours. Il a été relâché car il parlait trop. Par contre, il a été averti que si jamais il révèle ce qu'il a vu ce jour-là, il disparaîtrait sans laisser de trace... Ainsi commence le génocide des requins parlants. Un par un, ces êtres mystiques disparaissent du Canada. Et le monde ne saura jamais pourquoi, à moins que Cédric brise son silence.",
+            "Il fait sombre à l'intérieur de la cabane. Un fort bourdonnement vient du fond de la salle. Cédric suit la source du son et découvre une porte qui mène à une espèce de sous-sol. Il descend les escaliers et voit une machine cylindrique peinturée en rouge. Sur la surface latérale est écrit: Sharkiller L-14. Dû aux vibrations provenant du tueur de requin, Cédric n'entend pas les deux agents fédéraux qui sont sortis de leur cachette courir vers lui. Il est plaqué par les deux hommes.\n— Vous êtes en état d'arrest pour tresspassing du property de le gouvernement fédéral, dit un des agents avec un accent ontarien. Don't resist.\nCédric a été retenu prisonnier dans la base militaire secrète pendant deux jours. Il a été relâché car il parlait trop. Par contre, il a été averti que si jamais il révèle ce qu'il a vu ce jour-là, il disparaîtrait sans laisser de trace... Ainsi commence le génocide des requins parlants. Un par un, ces êtres mystiques disparaissent du Canada. Et le monde ne saura jamais pourquoi, à moins que Cédric brise son silence.",
           options: [
             {
               text: "A. Recommencer",
@@ -480,7 +480,7 @@ module.exports = class Geocaching extends (
         {
           id: 22,
           text:
-            "Laurent accélère et se propulse vers le dessus du barrage comme un missile. Cédric a envie de vomir. Il ne s'est pas senti aussi étourdi depuis le party d'Halloween. Ils dépassent le mur géant et entrent en chute libre vers les chutes de la Chaudière. Les deux frappent la surface de l'eau avec un gros splash. Le courant est si puissant qu'ils ont emportés au-delà du parlement, jusqu'au canal Rideau.\n— Ight, c'est ici que tu débarques, dit Laurent. Va au parlement, le Gardien te dira quoi faire. Ciao man. Le requin disparaît ensuite sous la surface de l'eau. Cédric voit la tour de la Paix derrière un amas d'arbres. Il ressent une présence sinistre provenir du bâtiment, mais il ressent aussi quelque chose de pure... quelque chose de québécois dans les tunnels du canal. Cédric est attiré par la force des tunnels, mais sa quête est d'affronter l'être maléfique du parlement. Que devrait-il faire?",
+            "Laurent accélère et se propulse vers le dessus du barrage comme un missile. Cédric a envie de vomir. Il ne s'est pas senti aussi étourdi depuis le party d'Halloween. Ils dépassent le mur géant et entrent en chute libre vers les chutes de la Chaudière. Les deux frappent la surface de l'eau avec un gros splash. Le courant est si puissant qu'ils sont emportés au-delà du parlement, jusqu'au canal Rideau.\n— Ight, c'est ici que tu débarques, dit Laurent. Va au parlement, le Gardien te dira quoi faire. Ciao man. Le requin disparaît ensuite sous la surface de l'eau. Cédric voit la tour de la Paix derrière un amas d'arbres. Il ressent une présence sinistre provenir du bâtiment, mais il ressent aussi quelque chose de pure... quelque chose de québécois dans les tunnels du canal. Cédric est attiré par la force des tunnels, mais sa quête est d'affronter l'être maléfique du parlement. Que devrait-il faire?",
           options: [
             {
               text: "A. Aller au parlement",
@@ -558,7 +558,7 @@ module.exports = class Geocaching extends (
         {
           id: 26,
           text:
-            "Cédric abandonne Laurent à son triste sort et s’enfuit vers le musée. Cependant, en s’approchant de son sanctuaire, il voit plusieurs véhicules de la Gendarmerie royale canadienne stationnés devant le musée. Malheureusement, Cédric se fait arrêter par des officiers de la GRC. Il est condamné à 20 ans d’imprisonement pour avoir été un complice du fameux terroriste domestique Laurent Shark David. À sa libération en 2040, Cédric se dit qu’il serait peut-être temps d’aller faire une autre partie de geocaching, for hold time’s sake!",
+            "Cédric abandonne Laurent à son triste sort et s’enfuit vers le musée. Cependant, en s’approchant de son sanctuaire, il voit plusieurs véhicules de la Gendarmerie royale canadienne stationnés devant le musée. Malheureusement, Cédric se fait arrêter par des officiers de la GRC. Il est condamné à 20 ans d’emprisonnement pour avoir été un complice du fameux terroriste domestique Laurent Shark David. À sa libération en 2040, Cédric se dit qu’il serait peut-être temps d’aller faire une autre partie de geocaching, for hold time’s sake!",
           options: [
             {
               text: "A. Recommencer",
@@ -590,7 +590,7 @@ module.exports = class Geocaching extends (
         {
           id: 28,
           text:
-            "— On s’en va où, Walter?\n—	À la Chambre des communes, répond le chien. Je t'amène au Baby. Ça fait des jours qu'il refuse de leave le parlement. —	Dababy? demande Cédric. Walter fait non d’un signe de tête. Il semble dégouté.\nIls s’arrêtent devant les portes de la Chambre. Une odeur répugnante inonde les narines du jeune souverainiste. Quelque chose de sinistre se trouve derrière ces portes. Cédric ouvre les portes de bois et entre.\n Il voit un bébé énorme assis sur le siège du Président de la Chambre. Cette créature aussi grosse qu’un ours polaire était enrobée dans une couche souillée Pampers.\n —	Cédricou, dit le Baby. Mon beau souverainiste… Rejoins le côté obscure… Ensemble, nous pourrions conquérir le monde.",
+            "— On s’en va où, Walter?\n— À la Chambre des communes, répond le chien. Je t'amène au Baby. Ça fait des jours qu'il refuse de leave le parlement. —	Dababy? demande Cédric. Walter fait non d’un signe de tête. Il semble dégouté.\nIls s’arrêtent devant les portes de la Chambre. Une odeur répugnante inonde les narines du jeune souverainiste. Quelque chose de sinistre se trouve derrière ces portes. Cédric ouvre les portes de bois et entre.\n Il voit un bébé énorme assis sur le siège du Président de la Chambre. Cette créature aussi grosse qu’un ours polaire était enrobée dans une couche souillée Pampers.\n —	Cédricou, dit le Baby. Mon beau souverainiste… Rejoins le côté obscure… Ensemble, nous pourrions conquérir le monde.",
           options: [
             {
               text: "A. Rejoindre le côté obscure",
@@ -675,7 +675,7 @@ module.exports = class Geocaching extends (
         {
           id: 33,
           text:
-            "—Non, it’s hokay, répond Cédric. Ça me tente pas, là…\n — Alors tu mourras. Le Baby descend de sa chaise et court vers le souverainiste. Ses flatulences sont visibles. Cédric doit se défendre.",
+            "— Non, it’s hokay, répond Cédric. Ça me tente pas, là…\n — Alors tu mourras. Le Baby descend de sa chaise et court vers le souverainiste. Ses flatulences sont visibles. Cédric doit se défendre.",
           options: [
             {
               text: "A. Lui donner un coup de poing",
