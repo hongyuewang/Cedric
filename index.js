@@ -24,6 +24,10 @@ bot.registry
   ])
   .registerCommandsIn(path.join(__dirname, "commands"));
 
+// Other properties of bot
+
+bot.queue = new Map();
+
 // Login
 require("dotenv").config();
 keepAlive();
