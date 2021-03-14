@@ -21,6 +21,7 @@
     "ffmpeg-static": "^4.2.7",
     "moment-timezone": "^0.5.31",
     "pm2": "^4.5.1",
-    "ytdl-core": "^4.5.0"
+    "ytdl-core": "^4.5.0",
+    "axios": ">=0.21.1"
   }
 }
