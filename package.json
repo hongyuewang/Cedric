@@ -17,7 +17,10 @@
     "discord.js-commando": "github:discordjs/Commando",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "ffmpeg-static": "^4.2.7",
     "moment-timezone": "^0.5.31",
-    "pm2": "^4.5.1"
+    "opusscript": "0.0.8",
+    "pm2": "^4.5.1",
+    "ytdl-core": "^4.5.0"
   }
 }

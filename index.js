@@ -20,6 +20,7 @@ bot.registry
     ["text", "Text"],
     ["games", "Games"],
     ["admin", "Admin"],
+    ["voice", "Voice"],
   ])
   .registerCommandsIn(path.join(__dirname, "commands"));
 
