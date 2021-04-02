@@ -499,120 +499,109 @@ bot.on("message", async (message) => {
 // The RONA command: Cédric talks about his career goals.
 
 bot.on("message", async (message) => {
-    if (message.content.toLowerCase().includes("rona")) {
-      if (message.author.id === bot.user.id) return;
-      message.channel.send("Le RONA?");
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-      message.channel.send(
-        "Plus que je travaille au RONA, moins j’ai l’intérêt de rester " +
-          "dans l’établissement."
-      );
-      await new Promise((resolve) => setTimeout(resolve, 10000));
-      message.channel.send(
-        "Je ne devrais même pas encourager cette entreprise."
-      );
-      await new Promise((resolve) => setTimeout(resolve, 10000));
-      message.channel.send(
-        "Je préfère voir du monde qui on la passion de vendre des produits " +
-          "de qualité que voir du monde à s’en mettre pleins les poches " +
-          "grâce aux multinationales. "
-      );
-      await new Promise((resolve) => setTimeout(resolve, 10000));
-      message.channel.send(
-        "La quantité vient avant la qualité et c’est pour ça que je vais " +
-          "aller en administration des affaires."
-      );
-      await new Promise((resolve) => setTimeout(resolve, 10000));
-      message.channel.send(
-        "Je pourrais aussi avoir l’option d’être conseiller et je " +
-          "veux encourager ces compagnies locales à grandir au sein " +
-          "de la province québécoise."
-      );
-    }
+  if (message.content.toLowerCase().includes("rona")) {
+    if (message.author.id === bot.user.id) return;
+    message.channel.send("Le RONA?");
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    message.channel.send(
+      "Plus que je travaille au RONA, moins j’ai l’intérêt de rester " +
+        "dans l’établissement."
+    );
+    await new Promise((resolve) => setTimeout(resolve, 10000));
+    message.channel.send("Je ne devrais même pas encourager cette entreprise.");
+    await new Promise((resolve) => setTimeout(resolve, 10000));
+    message.channel.send(
+      "Je préfère voir du monde qui on la passion de vendre des produits " +
+        "de qualité que voir du monde à s’en mettre pleins les poches " +
+        "grâce aux multinationales. "
+    );
+    await new Promise((resolve) => setTimeout(resolve, 10000));
+    message.channel.send(
+      "La quantité vient avant la qualité et c’est pour ça que je vais " +
+        "aller en administration des affaires."
+    );
+    await new Promise((resolve) => setTimeout(resolve, 10000));
+    message.channel.send(
+      "Je pourrais aussi avoir l’option d’être conseiller et je " +
+        "veux encourager ces compagnies locales à grandir au sein " +
+        "de la province québécoise."
+    );
+  }
 });
 
 // The Question Command: Cédric answers anything.
 
 bot.on("message", async (message) => {
-    const embedYes = new Discord.MessageEmbed()
-      .setColor("#33a532")
-      .setAuthor(message.author.username, message.author.displayAvatarURL())
-      .setTitle("Ben oui!!")
-      .setDescription("AhHhHHhHhHhHHhHHh")
-      .attachFiles(["./img/questions/yes.gif"])
-      .setImage("attachment://yes.gif");
+  const embedYes = new Discord.MessageEmbed()
+    .setColor("#33a532")
+    .setAuthor(message.author.username, message.author.displayAvatarURL())
+    .setTitle("Ben oui!!")
+    .setDescription("AhHhHHhHhHhHHhHHh")
+    .attachFiles(["./img/questions/yes.gif"])
+    .setImage("attachment://yes.gif");
 
-    const embedNo = new Discord.MessageEmbed()
-      .setColor("#FF0000")
-      .setAuthor(message.author.username, message.author.displayAvatarURL())
-      .setTitle("Non.")
-      .attachFiles(["./img/questions/no.gif"])
-      .setImage("attachment://no.gif");
+  const embedNo = new Discord.MessageEmbed()
+    .setColor("#FF0000")
+    .setAuthor(message.author.username, message.author.displayAvatarURL())
+    .setTitle("Non.")
+    .attachFiles(["./img/questions/no.gif"])
+    .setImage("attachment://no.gif");
 
-    if (
-      message.content
-        .toLowerCase()
-        .replace(/é/g, "e")
-        .startsWith("cedric es") ||
-      message.content
-        .toLowerCase()
-        .replace(/é/g, "e")
-        .startsWith("cedric peu") ||
-      message.content
-        .toLowerCase()
-        .replace(/é/g, "e")
-        .startsWith("cedric va") ||
-      message.content.toLowerCase().replace(/é/g, "e").startsWith("cedric a") ||
-      message.content
-        .toLowerCase()
-        .replace(/'/g, "")
-        .replace(/é/g, "e")
-        .startsWith("cedric tes") ||
-      message.content
-        .toLowerCase()
-        .replace(/'/g, "")
-        .replace(/é/g, "e")
-        .startsWith("cedric jai") ||
-      message.content
-        .toLowerCase()
-        .replace(/'/g, "")
-        .replace(/é/g, "e")
-        .startsWith("cedric je peu") ||
-      message.content
-        .toLowerCase()
-        .replace(/'/g, "")
-        .replace(/é/g, "e")
-        .startsWith("cedric tu peu")
-    ) {
-      if (message.author.id === bot.user.id) return;
-      const randomNumber = Math.floor(Math.random() * 2);
-      switch (randomNumber) {
-        case 0:
-          message.channel.send(embedNo);
-          break;
-        case 1:
-          message.channel.send(embedYes);
-          break;
-      }
+  if (
+    message.content.toLowerCase().replace(/é/g, "e").startsWith("cedric es") ||
+    message.content.toLowerCase().replace(/é/g, "e").startsWith("cedric peu") ||
+    message.content.toLowerCase().replace(/é/g, "e").startsWith("cedric va") ||
+    message.content.toLowerCase().replace(/é/g, "e").startsWith("cedric a") ||
+    message.content
+      .toLowerCase()
+      .replace(/'/g, "")
+      .replace(/é/g, "e")
+      .startsWith("cedric tes") ||
+    message.content
+      .toLowerCase()
+      .replace(/'/g, "")
+      .replace(/é/g, "e")
+      .startsWith("cedric jai") ||
+    message.content
+      .toLowerCase()
+      .replace(/'/g, "")
+      .replace(/é/g, "e")
+      .startsWith("cedric je peu") ||
+    message.content
+      .toLowerCase()
+      .replace(/'/g, "")
+      .replace(/é/g, "e")
+      .startsWith("cedric tu peu")
+  ) {
+    if (message.author.id === bot.user.id) return;
+    const randomNumber = Math.floor(Math.random() * 2);
+    switch (randomNumber) {
+      case 0:
+        message.channel.send(embedNo);
+        break;
+      case 1:
+        message.channel.send(embedYes);
+        break;
     }
+  }
 
-    if (
-      message.content
-        .toLowerCase()
-        .replace(/é/g, "e")
-        .replace(/ù/g, "u")
-        .startsWith("cedric ou")
-    ) {
-      if (message.author.id === bot.user.id) return;
-      const locations = require("./json/questions/locations.json");
-      const randomNumber = Math.floor(Math.random() * locations.length);
-      const randomLocationName = locations[randomNumber].name;
-      const randomLocationImage = new Discord.MessageEmbed().setImage(
-        locations[randomNumber].image
-      );
-      message.channel.send(randomLocationName);
-      if (locations[randomNumber].image != undefined) {
-        message.channel.send(randomLocationImage);
-      }
+  if (
+    message.content
+      .toLowerCase()
+      .replace(/é/g, "e")
+      .replace(/ù/g, "u")
+      .startsWith("cedric ou")
+  ) {
+    if (message.author.id === bot.user.id) return;
+    const locations = require("./json/questions/locations.json");
+    const randomNumber = Math.floor(Math.random() * locations.length);
+    const randomLocationName = locations[randomNumber].name;
+    const randomLocationImage = new Discord.MessageEmbed().setImage(
+      locations[randomNumber].image
+    );
+    message.channel.send(randomLocationName);
+    if (locations[randomNumber].image != undefined) {
+      message.channel.send(randomLocationImage);
     }
+  }
 });
