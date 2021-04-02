@@ -93,7 +93,9 @@ bot.on("message", (message) => {
 bot.on("message", (message) => {
   if (
     message.content.toLowerCase() == "ced!overlord" ||
-    message.content.toLowerCase() == "ced!kill"
+    message.content.toLowerCase() == "ced!kill" ||
+    message.content.toLowerCase() == "ced!tayeule" ||
+    message.content.toLowerCase() == "ced!tyl"
   ) {
     message.channel.send("Restarting...");
     process.exit();
