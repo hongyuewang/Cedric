@@ -41,7 +41,7 @@ bot.once("ready", () => {
     for (guildID of bot.guilds.cache.keyArray()) {
       greetingGuild = bot.guilds.cache.get(guildID);
       greetingChannel = greetingGuild.channels.cache.find(
-        (channel) => channel.name === "general"
+        (channel) => channel.name === "gourous-general"
       );
       localTime = moment().tz("America/Toronto");
 
