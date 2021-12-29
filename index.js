@@ -81,7 +81,7 @@ bot.once("ready", () => {
   }, 300000);
 });
 
-bot.on("message", (message) => {
+bot.on("messageCreate", (message) => {
   console.log(message.content);
   var localTime = moment().tz("America/Toronto");
   console.log(
@@ -90,7 +90,7 @@ bot.on("message", (message) => {
 });
 
 // Overlord Command
-bot.on("message", (message) => {
+bot.on("messageCreate", (message) => {
   if (
     message.content.toLowerCase() == "ced!overlord" ||
     message.content.toLowerCase() == "ced!kill" ||
@@ -105,7 +105,7 @@ bot.on("message", (message) => {
 // Keyword Commands
 
 // The Ping Command: Cédric replies with a bad pun about ping pong whenever a message contains the word 'ping'.
-bot.on("message", (message) => {
+bot.on("messageCreate", (message) => {
   if (message.content.toLowerCase().includes("ping")) {
     if (message.author.id === bot.user.id) return;
     message.reply(
@@ -115,7 +115,7 @@ bot.on("message", (message) => {
 });
 
 // The Quebec Command: Cédric talks about the province of Quebec whenever someone in the server mentions it.
-bot.on("message", async (message) => {
+bot.on("messageCreate", async (message) => {
   let randomNumber;
   const quebecReplies = [
     "Le Québec c'est un pays!", // 0
@@ -183,7 +183,7 @@ bot.on("message", async (message) => {
 });
 
 // The Anti-Quebec Command: Cédric responds to whoever suggests that Quebec is not a country.
-bot.on("message", async (message) => {
+bot.on("messageCreate", async (message) => {
   if (
     (message.content.toLowerCase().includes("quebec") ||
       message.content.toLowerCase().includes("québec")) &&
@@ -231,7 +231,7 @@ bot.on("message", async (message) => {
 /* The Cool Hwhip Command: Cédric talks about Cool Hwip and Family Guy whenever
 the word 'cool' is present in a message. */
 
-bot.on("message", async (message) => {
+bot.on("messageCreate", async (message) => {
   if (message.content.toLowerCase().includes("cool")) {
     if (message.author.id === bot.user.id) return;
     message.channel.send("Cool? Comme la cool hwip?");
@@ -265,7 +265,7 @@ bot.on("message", async (message) => {
 });
 
 /* The Generation Command: Cédric talks about Gen-Z*/
-bot.on("message", async (message) => {
+bot.on("messageCreate", async (message) => {
   if (message.content.toLowerCase().replace(/é/g, "e").includes("generation")) {
     if (message.author.id === bot.user.id) return;
     message.channel.send("Les générations?");
@@ -348,7 +348,7 @@ bot.on("message", async (message) => {
 });
 
 // The Dhar Mann Command: Cédric talks about Dhar Mann and sitcoms
-bot.on("message", async (message) => {
+bot.on("messageCreate", async (message) => {
   try {
     if (message.content.toLowerCase().includes("man")) {
       if (message.author.id === bot.user.id) return;
@@ -383,7 +383,7 @@ bot.on("message", async (message) => {
 });
 
 // The Exam Command: Cédric talks about his philosophy exam
-bot.on("message", async (message) => {
+bot.on("messageCreate", async (message) => {
   if (message.content.toLowerCase().includes("exam")) {
     if (message.author.id === bot.user.id) return;
     message.channel.send("Les examens?");
@@ -443,7 +443,7 @@ bot.on("message", async (message) => {
 });
 
 // The Right Command: Cédric talks about his grand economic plan
-bot.on("message", async (message) => {
+bot.on("messageCreate", async (message) => {
   if (message.content.toLowerCase().includes("droite")) {
     if (message.author.id === bot.user.id) return;
     message.channel.send("La droite?");
@@ -500,7 +500,7 @@ bot.on("message", async (message) => {
 
 // The RONA command: Cédric talks about his career goals.
 
-bot.on("message", async (message) => {
+bot.on("messageCreate", async (message) => {
   if (message.content.toLowerCase().includes("rona")) {
     if (message.author.id === bot.user.id) return;
     message.channel.send("Le RONA?");
@@ -533,7 +533,7 @@ bot.on("message", async (message) => {
 
 // The Question Command: Cédric answers anything.
 
-bot.on("message", async (message) => {
+bot.on("messageCreate", async (message) => {
   const embedYes = new Discord.MessageEmbed()
     .setColor("#33a532")
     .setAuthor(message.author.username, message.author.displayAvatarURL())
